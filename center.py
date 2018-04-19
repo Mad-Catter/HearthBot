@@ -8,12 +8,12 @@ play = 'PLAY_SOUND","url"'
 attack = 'ATTACK_SOUND","url"'
 trigger = 'TRIGGER_SOUND","url"'
 TestEnd = '.ogg'
-
+wow = "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg"
 def linker(link, end):
-	bolvar1 = urllib2.urlopen(link)
-	bolvar2 = bolvar1.read()
-	bolvar = str(BeautifulSoup(bolvar2,'html.parser'))
-
+	opener = urllib2.urlopen(link)
+	reader = opener.read()
+	clean = str(BeautifulSoup(reader,'html.parser'))
+	print clean
 	remove = 20
 	
 
@@ -28,13 +28,18 @@ def linker(link, end):
 	elif end == "trigger":
 		letter = trigger
 		remove = 22
-	search = re.search(r'%s[\a-z|\s|A-Z]+%s' % (letter,TestEnd),bolvar)
+	search = re.search(r'%s[\a-z|\s|A-Z]+%s' % (letter,TestEnd),clean)
 	if search:
 		found = '%s' % (search.group(0))
 		TrueFound = found[remove:len(found)]
-		print "%s%s" % (StartUrl,TrueFound)
+		#print "%s%s" % (StartUrl,TrueFound)
 	else:
 		print "Error"
-	#print bolvar
 
-linker("http://www.hearthhead.com/cards/nexus-champion-saraad","trigger")
+#linker("http://www.hearthhead.com/cards/nexus-champion-saraad","attack")
+
+
+opener = urllib2.urlopen('http://www.hearthhead.com/cards?cost=0,1,2,3,4,5,6,7&type=MINION&collectible=true&view=list')
+reader = opener.read()
+clean = str(BeautifulSoup(reader,'html.parser'))
+print reader
