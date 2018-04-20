@@ -1,6 +1,9 @@
 import urllib2
 import re
 from bs4 import BeautifulSoup
+import card_list
+
+minion_list = card_list.minion_list
 
 StartUrl ="http://media.services.zam.com/v1/media/byName/"
 death = 'DEATH_SOUND","url"'
@@ -13,7 +16,7 @@ def linker(link, end):
 	opener = urllib2.urlopen(link)
 	reader = opener.read()
 	clean = str(BeautifulSoup(reader,'html.parser'))
-	print clean
+	#print clean
 	remove = 20
 	
 
@@ -32,14 +35,8 @@ def linker(link, end):
 	if search:
 		found = '%s' % (search.group(0))
 		TrueFound = found[remove:len(found)]
-		#print "%s%s" % (StartUrl,TrueFound)
+		print "%s%s" % (StartUrl,TrueFound)
 	else:
 		print "Error"
 
-#linker("http://www.hearthhead.com/cards/nexus-champion-saraad","attack")
-
-
-opener = urllib2.urlopen('http://www.hearthhead.com/cards?cost=0,1,2,3,4,5,6,7&type=MINION&collectible=true&view=list')
-reader = opener.read()
-clean = str(BeautifulSoup(reader,'html.parser'))
-print reader
+linker("http://www.hearthhead.com/cards/nexus-champion-saraad","attack")
