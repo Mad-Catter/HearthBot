@@ -1,3 +1,0 @@
-
-
-secret_id = "blank"
