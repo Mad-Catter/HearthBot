@@ -29,6 +29,6 @@ def SoundFinder(link, event):
 	search = re.search(r'%s[\a-z|\s|A-Z]+.ogg' % (start),clean)
 	if search:
 		found = '%s' % (search.group(0))
-		SoundLink = found[remove:len(found)]
-		#Found is the link + the search terms, while SoundLink is purely the link to the sound.
-		return "http://media.services.zam.com/v1/media/byName/%s" % (SoundLink)
+		sound_link = found[remove:len(found)]
+		#Found is the link + the search terms, while sound_link is purely the link to the sound.
+		return "http://media.services.zam.com/v1/media/byName/%s" % (sound_link)
