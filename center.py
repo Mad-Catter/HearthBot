@@ -1,5 +1,16 @@
+# -*- coding: utf-8 -*-
 from sound_finder import SoundFinder
 import string
+import praw
+import secret
+reddit = praw.Reddit(client_id=secret.client_id, client_secret = secret.secret_id, user_agent = secret.user_agent, username = secret.username, password = secret.password)
+
+subreddit = reddit.subreddit('test')
+print reddit.read_only
+
+comments = subreddit.stream.comments()
+
+
 #While most of the card sounds will have to be called by stating the card and type of sound, I plan to have a few famous sounds be called a bit eaiser.  Like the priest wow.
 wow = "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg"
 
@@ -65,19 +76,29 @@ the_reply9 = ''
 the_card10 = ''
 the_event10 = ''
 the_reply10 = ''
+cache = []
 
 #This list is a placeholder for actual comments
-comments = ['((lord-jaraxxus))','iron-juggernautwasdfaw','((play))','bolvar-fireblood', '((attack))','((death))','nexus-champion-saraad','((trigger))','bewitched-guardian', '((death))', 'marin-the-fox',
-'((play))'
-]
+#comments = ['((lord-jaraxxus))','iron-juggernautwasdfaw','((play))','bolvar-fireblood', '((attack))','((death))','nexus-champion-saraad','((trigger))','bewitched-guardian', '((death))', 'marin-the-fox',
+#'((play))'
+#]
+
+
+
+
 
 #This will check each individual comment in a list of comments(for comment in comments), and then check if that comment has a card in it(for card in minion list, if card in comment).
 #If it does it will find the card link and store the link and card in the variable the_card#(cardlinkstart and the_card#).
 #Each individual card is kept in its own the_card# variable so 10 cards in total can be called in a single comment.
 #To make sure no cards are overwritten, it checks if each the_card# is blank, and uses the first blank the_card# variable it finds. 
 for comment in comments:
-	for card in minion_list:
-			if card in comment:
+	text = comment.body
+	text = text.encode('utf-8','ignore')
+	text = text.replace('\\', '')
+	print text
+	if comment.id not in cache:
+		for card in minion_list:
+			if card in text:
 				if the_card == '':
 					the_card_link = '%s%s' % (cardlinkstart,card)
 					the_card = string.capwords(card.replace('-',' '))
@@ -108,93 +129,100 @@ for comment in comments:
 				elif the_card10 == '':
 					the_card_link10 = '%s%s' % (cardlinkstart,card)
 					the_card10 = string.capwords(card.replace('-',' '))
-
 #This does exactly the same as the cards.  The two differnces are that the first and last two characters of the_event are being trimmed off.
 #This is because the events need to be called with double parenthesis, and the reason for that is to try to avoid unwanted callings of the bot.  The second thing that is different is the event_caller.
-for comment in comments:
-	for line in event_list:
-		if line in comment:
-			if the_event == '':
-				the_event = line[2:len(line)-2]
-				event_caller = EventFinder(the_event)
-			elif the_event2 == '':
-				the_event2 = line[2:len(line)-2]
-				event_caller2 = EventFinder(the_event2)
-			elif the_event3 == '':
-				the_event3 = line[2:len(line)-2]
-				event_caller3 = EventFinder(the_event3)
-			elif the_event4 == '':
-				the_event4 = line[2:len(line)-2]
-				event_caller4 = EventFinder(the_event4)
-			elif the_event5 == '':
-				the_event5 = line[2:len(line)-2]
-				event_caller5 = EventFinder(the_event5)
-			elif the_event6 == '':
-				the_event6 = line[2:len(line)-2]
-				event_caller6 = EventFinder(the_event6)
-			elif the_event7 == '':
-				the_event7 = line[2:len(line)-2]
-				event_caller7 = EventFinder(the_event7)
-			elif the_event8 == '':
-				the_event8 = line[2:len(line)-2]
-				event_caller8 = EventFinder(the_event8)
-			elif the_event9 == '':
-				the_event9 = line[2:len(line)-2]
-				event_caller9 = EventFinder(the_event9)
-			elif the_event10 == '':
-				the_event10 = line[2:len(line)-2]
-				event_caller10 = EventFinder(the_event10)
+		for line in event_list:
+			if line in text:
+				if the_event == '':
+					the_event = line[2:len(line)-2]
+					event_caller = EventFinder(the_event)
+				elif the_event2 == '':
+					the_event2 = line[2:len(line)-2]
+					event_caller2 = EventFinder(the_event2)
+				elif the_event3 == '':
+					the_event3 = line[2:len(line)-2]
+					event_caller3 = EventFinder(the_event3)
+				elif the_event4 == '':
+					the_event4 = line[2:len(line)-2]
+					event_caller4 = EventFinder(the_event4)
+				elif the_event5 == '':
+					the_event5 = line[2:len(line)-2]
+					event_caller5 = EventFinder(the_event5)
+				elif the_event6 == '':
+					the_event6 = line[2:len(line)-2]
+					event_caller6 = EventFinder(the_event6)
+				elif the_event7 == '':
+					the_event7 = line[2:len(line)-2]
+					event_caller7 = EventFinder(the_event7)
+				elif the_event8 == '':
+					the_event8 = line[2:len(line)-2]
+					event_caller8 = EventFinder(the_event8)
+				elif the_event9 == '':
+					the_event9 = line[2:len(line)-2]
+					event_caller9 = EventFinder(the_event9)
+				elif the_event10 == '':
+					the_event10 = line[2:len(line)-2]
+					event_caller10 = EventFinder(the_event10)	
 
 #This is where the actual message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
 #First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
 #It is formatted into []() which is Reddit's way of having hyperlinks in comments. 
-if the_card != '' and the_event != '':
-	the_result = SoundFinder(the_card_link,the_event)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card, event_caller, the_result)
-		the_reply = '[%s%s](%s)' % (the_card, event_caller, the_result)
-if the_card2 != '' and the_event2 != '':
-	the_result2 = SoundFinder(the_card_link2,the_event2)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card2, event_caller2, the_result2)
-		the_reply2 = '[%s%s](%s)' % (the_card2, event_caller2, the_result2)
-if the_card3 != '' and the_event3 != '':
-	the_result3 = SoundFinder(the_card_link3,the_event3)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card3, event_caller3, the_result3)
-		the_reply3 = '[%s%s](%s)' % (the_card3, event_caller3, the_result3)
-if the_card4 != '' and the_event4 != '':
-	the_result4 = SoundFinder(the_card_link4,the_event4)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card4, event_caller4, the_result4)
-		the_reply4 = '[%s%s](%s)' % (the_card4, event_caller4, the_result4)
-if the_card5 != '' and the_event5 != '':
-	the_result5 = SoundFinder(the_card_link5,the_event5)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card5, event_caller5, the_result5)
-		the_reply5 = '[%s%s](%s)' % (the_card5, event_caller5, the_result5)
-if the_card6 != '' and the_event6 != '':
-	the_result6 = SoundFinder(the_card_link6,the_event6)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card6, event_caller6, the_result6)
-		the_reply6 = '[%s%s](%s)' % (the_card6, event_caller6, the_result6)
-if the_card7 != '' and the_event7 != '':
-	the_result7 = SoundFinder(the_card_link7,the_event7)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card7, event_caller7, the_result7)
-		the_reply7 = '[%s%s](%s)' % (the_card7, event_caller7, the_result7)
-if the_card8 != '' and the_event8 != '':
-	the_result8 = SoundFinder(the_card_link8,the_event8)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card8, event_caller8, the_result8)
-		the_reply8 = '[%s%s](%s)' % (the_card8, event_caller8, the_result8)
-if the_card9 != '' and the_event9 != '':
-	the_result9 = SoundFinder(the_card_link9,the_event9)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card9, event_caller9, the_result9)
-		the_reply9 = '[%s%s](%s)' % (the_card9, event_caller9, the_result9)
-if the_card10 != '' and the_event10 != '':
-	the_result10 = SoundFinder(the_card_link10,the_event10)
-	if the_result != None:
-		print '[%s%s](%s)' % (the_card10, event_caller10, the_result10)
-		the_reply10 = '[%s%s](%s)' % (the_card10, event_caller10, the_result10)
+		if the_card != '' and the_event != '':
+			the_result = SoundFinder(the_card_link,the_event)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card, event_caller, the_result)
+				the_reply = '  [%s%s](%s)' % (the_card, event_caller, the_result)
+		if the_card2 != '' and the_event2 != '':
+			the_result2 = SoundFinder(the_card_link2,the_event2)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card2, event_caller2, the_result2)
+				the_reply2 = '[%s%s](%s)' % (the_card2, event_caller2, the_result2)
+		if the_card3 != '' and the_event3 != '':
+			the_result3 = SoundFinder(the_card_link3,the_event3)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card3, event_caller3, the_result3)
+				the_reply3 = '[%s%s](%s)' % (the_card3, event_caller3, the_result3)
+		if the_card4 != '' and the_event4 != '':
+			the_result4 = SoundFinder(the_card_link4,the_event4)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card4, event_caller4, the_result4)
+				the_reply4 = '[%s%s](%s)' % (the_card4, event_caller4, the_result4)
+		if the_card5 != '' and the_event5 != '':
+			the_result5 = SoundFinder(the_card_link5,the_event5)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card5, event_caller5, the_result5)
+				the_reply5 = '[%s%s](%s)' % (the_card5, event_caller5, the_result5)
+		if the_card6 != '' and the_event6 != '':
+			the_result6 = SoundFinder(the_card_link6,the_event6)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card6, event_caller6, the_result6)
+				the_reply6 = '[%s%s](%s)' % (the_card6, event_caller6, the_result6)
+		if the_card7 != '' and the_event7 != '':
+			the_result7 = SoundFinder(the_card_link7,the_event7)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card7, event_caller7, the_result7)
+				the_reply7 = '[%s%s](%s)' % (the_card7, event_caller7, the_result7)
+		if the_card8 != '' and the_event8 != '':
+			the_result8 = SoundFinder(the_card_link8,the_event8)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card8, event_caller8, the_result8)
+				the_reply8 = '[%s%s](%s)' % (the_card8, event_caller8, the_result8)
+		if the_card9 != '' and the_event9 != '':
+			the_result9 = SoundFinder(the_card_link9,the_event9)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card9, event_caller9, the_result9)
+				the_reply9 = '[%s%s](%s)' % (the_card9, event_caller9, the_result9)
+		if the_card10 != '' and the_event10 != '':
+			the_result10 = SoundFinder(the_card_link10,the_event10)
+			if the_result != None:
+				print '[%s%s](%s)' % (the_card10, event_caller10, the_result10)
+				the_reply10 = '[%s%s](%s)' % (the_card10, event_caller10, the_result10)
+		if the_reply != '':
+			print comment
+			comment.reply(str(the_reply))
+			cache.append(comment.id)
+			the_card = ''
+			the_result = None
+			the_event = ''
+			the_reply =''
+			event_caller = None
