@@ -96,6 +96,8 @@ for comment in comments:
 	text = comment.body
 	text = text.encode('utf-8','ignore')
 	text = text.replace('\\', '')
+	text = text.replace(' ','-')
+	text = text.lower()
 	print text
 	if comment.id not in cache:
 		for card in minion_list:
@@ -171,328 +173,85 @@ for comment in comments:
 		if the_card != '' and the_event != '':
 			the_result = SoundFinder(the_card_link,the_event)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card, event_caller, the_result)
+				print '  [%s%s](%s)' % (the_card, event_caller, the_result)
 				the_reply = '  [%s%s](%s)' % (the_card, event_caller, the_result)
 		if the_card2 != '' and the_event2 != '':
 			the_result2 = SoundFinder(the_card_link2,the_event2)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card2, event_caller2, the_result2)
-				the_reply2 = '[%s%s](%s)' % (the_card2, event_caller2, the_result2)
+				print '  [%s%s](%s)' % (the_card2, event_caller2, the_result2)
+				the_reply2 = '  [%s%s](%s)' % (the_card2, event_caller2, the_result2)
 		if the_card3 != '' and the_event3 != '':
 			the_result3 = SoundFinder(the_card_link3,the_event3)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card3, event_caller3, the_result3)
-				the_reply3 = '[%s%s](%s)' % (the_card3, event_caller3, the_result3)
+				print '  [%s%s](%s)' % (the_card3, event_caller3, the_result3)
+				the_reply3 = '  [%s%s](%s)' % (the_card3, event_caller3, the_result3)
 		if the_card4 != '' and the_event4 != '':
 			the_result4 = SoundFinder(the_card_link4,the_event4)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card4, event_caller4, the_result4)
-				the_reply4 = '[%s%s](%s)' % (the_card4, event_caller4, the_result4)
+				print '  [%s%s](%s)' % (the_card4, event_caller4, the_result4)
+				the_reply4 = '  [%s%s](%s)' % (the_card4, event_caller4, the_result4)
 		if the_card5 != '' and the_event5 != '':
 			the_result5 = SoundFinder(the_card_link5,the_event5)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card5, event_caller5, the_result5)
-				the_reply5 = '[%s%s](%s)' % (the_card5, event_caller5, the_result5)
+				print '  [%s%s](%s)' % (the_card5, event_caller5, the_result5)
+				the_reply5 = '  [%s%s](%s)' % (the_card5, event_caller5, the_result5)
 		if the_card6 != '' and the_event6 != '':
 			the_result6 = SoundFinder(the_card_link6,the_event6)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card6, event_caller6, the_result6)
-				the_reply6 = '[%s%s](%s)' % (the_card6, event_caller6, the_result6)
+				print '  [%s%s](%s)' % (the_card6, event_caller6, the_result6)
+				the_reply6 = '  [%s%s](%s)' % (the_card6, event_caller6, the_result6)
 		if the_card7 != '' and the_event7 != '':
 			the_result7 = SoundFinder(the_card_link7,the_event7)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card7, event_caller7, the_result7)
-				the_reply7 = '[%s%s](%s)' % (the_card7, event_caller7, the_result7)
+				print '  [%s%s](%s)' % (the_card7, event_caller7, the_result7)
+				the_reply7 = '  [%s%s](%s)' % (the_card7, event_caller7, the_result7)
 		if the_card8 != '' and the_event8 != '':
 			the_result8 = SoundFinder(the_card_link8,the_event8)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card8, event_caller8, the_result8)
-				the_reply8 = '[%s%s](%s)' % (the_card8, event_caller8, the_result8)
+				print '  [%s%s](%s)' % (the_card8, event_caller8, the_result8)
+				the_reply8 = '  [%s%s](%s)' % (the_card8, event_caller8, the_result8)
 		if the_card9 != '' and the_event9 != '':
 			the_result9 = SoundFinder(the_card_link9,the_event9)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card9, event_caller9, the_result9)
-				the_reply9 = '[%s%s](%s)' % (the_card9, event_caller9, the_result9)
+				print '  [%s%s](%s)' % (the_card9, event_caller9, the_result9)
+				the_reply9 = '  [%s%s](%s)' % (the_card9, event_caller9, the_result9)
 		if the_card10 != '' and the_event10 != '':
 			the_result10 = SoundFinder(the_card_link10,the_event10)
 			if the_result != None:
-				print '[%s%s](%s)' % (the_card10, event_caller10, the_result10)
-				the_reply10 = '[%s%s](%s)' % (the_card10, event_caller10, the_result10)
+				print '  [%s%s](%s)' % (the_card10, event_caller10, the_result10)
+				the_reply10 = '  [%s%s](%s)' % (the_card10, event_caller10, the_result10)
 
 
 		if the_reply10 != '':
 			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
-			comment.reply(str(true_reply))
+			comment.reply(true_reply)
 		elif the_reply9 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_card4 = ''
-			the_event4 = ''
-			the_reply4 = ''
-			the_card5 = ''
-			the_event5 = ''
-			the_reply5 = ''
-			the_card6 = ''
-			the_event6 = ''
-			the_reply6 = ''
-			the_card7 = ''
-			the_event7 = ''
-			the_reply7 = ''
-			the_card8 = ''
-			the_event8 = ''
-			the_reply8 = ''
-			the_card9 = ''
-			the_event9 = ''
-			the_reply9 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
-			the_result4 = None
-			event_caller4 = None
-			the_result5 = None
-			event_caller5 = None
-			the_result6 = None
-			event_caller6 = None
-			the_result7 = None
-			event_caller7 = None
-			the_result8 = None
-			event_caller8 = None
-			the_result9 = None
-			event_caller9 = None
+			true_reply = '%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9)
+			comment.reply(true_reply)
 		elif the_reply8 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_card4 = ''
-			the_event4 = ''
-			the_reply4 = ''
-			the_card5 = ''
-			the_event5 = ''
-			the_reply5 = ''
-			the_card6 = ''
-			the_event6 = ''
-			the_reply6 = ''
-			the_card7 = ''
-			the_event7 = ''
-			the_reply7 = ''
-			the_card8 = ''
-			the_event8 = ''
-			the_reply8 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
-			the_result4 = None
-			event_caller4 = None
-			the_result5 = None
-			event_caller5 = None
-			the_result6 = None
-			event_caller6 = None
-			the_result7 = None
-			event_caller7 = None
-			the_result8 = None
-			event_caller8 = None
+			true_reply = '%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8)
+			comment.reply(true_reply)
 		elif the_reply7 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_card4 = ''
-			the_event4 = ''
-			the_reply4 = ''
-			the_card5 = ''
-			the_event5 = ''
-			the_reply5 = ''
-			the_card6 = ''
-			the_event6 = ''
-			the_reply6 = ''
-			the_card7 = ''
-			the_event7 = ''
-			the_reply7 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
-			the_result4 = None
-			event_caller4 = None
-			the_result5 = None
-			event_caller5 = None
-			the_result6 = None
-			event_caller6 = None
-			the_result7 = None
-			event_caller7 = None
+			true_reply = '%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7)
+			comment.reply(true_reply)
 		elif the_reply6 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_card4 = ''
-			the_event4 = ''
-			the_reply4 = ''
-			the_card5 = ''
-			the_event5 = ''
-			the_reply5 = ''
-			the_card6 = ''
-			the_event6 = ''
-			the_reply6 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
-			the_result4 = None
-			event_caller4 = None
-			the_result5 = None
-			event_caller5 = None
-			the_result6 = None
-			event_caller6 = None
+			true_reply = '%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6)
+			comment.reply(true_reply)
 		elif the_reply5 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_card4 = ''
-			the_event4 = ''
-			the_reply4 = ''
-			the_card5 = ''
-			the_event5 = ''
-			the_reply5 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
-			the_result4 = None
-			event_caller4 = None
-			the_result5 = None
-			event_caller5 = None
+			true_reply = '%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5)
+			comment.reply(true_reply)
 		elif the_reply4 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_card4 = ''
-			the_event4 = ''
-			the_reply4 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
-			the_result4 = None
-			event_caller4 = None
+			true_reply = '%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4)
+			comment.reply(true_reply)
 		elif the_reply3 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_card3 = ''
-			the_event3 = ''
-			the_reply3 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
-			the_result3 = None
-			event_caller3 = None
+			true_reply = '%s%s%s' % (the_reply,the_reply2,the_reply3)
+			comment.reply(true_reply)
 		elif the_reply2 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_card2 = ''
-			the_event2 = ''
-			the_reply2 = ''
-			the_result = None
-			event_caller = None
-			the_result2 = None
-			event_caller2 = None
+			true_reply = '%s%s' % (the_reply,the_reply2)
+			comment.reply(true_reply)
 		elif the_reply != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply)
-			comment.reply(str(true_reply))
-			cache.append(comment.id)
-			true_reply = ''
-			the_card = ''
-			the_event = ''
-			the_reply = ''
-			the_result = None
-			event_caller = None
+			true_reply = '%s' % (the_reply)
+			comment.reply(true_reply)
 
 		cache.append(comment.id)
 		true_reply = ''
