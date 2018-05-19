@@ -14,6 +14,12 @@ comments = subreddit.stream.comments()
 #While most of the card sounds will have to be called by stating the card and type of sound, I plan to have a few famous sounds be called a bit eaiser.  Like the priest wow.
 wow = "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg"
 
+special_lines = {'wow':'"http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg"',}
+
+dic_of_multiples = {'kelthuzad': 'kelthuzad-1', 'cthun': 'cthun-1', 'emperor-thaurissan': 'emperor-thaurissan-2', 'majordomo-executus': 'majordomo-executus-2', 'rend-blackhand': 'rend-blackhand-2',
+'chromaggus': 'chromaggus-2', 'nefarian': 'nefarian-7', 'blood-queen-lanathel': 'blood-queen-lanathel-2', 'professor-putricide': 'professor-putricide-1', 'sindragosa': 'sindragosa-4',
+'the-darkness': 'the-darkness-2'}
+
 #This is a list of all the minions currently in Hearthstone at the time of Witchwood.  It was made in card_list but copied into center so that the program doesn't have to remake the list each run.
 minion_list = ['molten-giant', 'arcane-giant', 'clockwork-giant','mountain-giant', 'snowfury-giant', 'cthun', 'deathwing', 'deathwing-dragonlord', 'emeriss', 'faceless-behemoth', 'frost-giant',
   'kun-the-forgotten-king', 'nzoth-the-corruptor', 'sea-giant', 'tyrantus', 'ultrasaur', 'varian-wrynn', 'yogg-saron-hopes-end', 'yshaarj-rage-unbound', 'alexstrasza', 'anubarak', 'arch-thief-rafaam', 'aviana',
@@ -43,7 +49,7 @@ def EventFinder(line_type):
 		return '\'s trigger line.'
 
 #The event list is a list of the terms people can use to call the bot and decide the type of line they want.
-event_list = ['((play))','((attack))','((death))','((trigger))']
+event_list = ['((attack))','((play))','((death))','((trigger))']
 
 #These are empty variables that will be used later.
 the_card = ''
@@ -76,6 +82,7 @@ the_reply9 = ''
 the_card10 = ''
 the_event10 = ''
 the_reply10 = ''
+comment_list = []
 cache = []
 true_reply = ''
 
@@ -98,6 +105,8 @@ for comment in comments:
 	text = text.replace('\\', '')
 	text = text.replace(' ','-')
 	text = text.lower()
+	comment_list = text.split('-')
+	print comment_list
 	print text
 	if comment.id not in cache:
 		for card in minion_list:
@@ -119,7 +128,7 @@ for comment in comments:
 					the_card5 = string.capwords(card.replace('-',' '))
 				elif the_card6 == '':
 					the_card_link6 = '%s%s' % (cardlinkstart,card)
-					the_card6 =string.capwords( card.replace('-',' '))
+					the_card6 =string.capwords(card.replace('-',' '))
 				elif the_card7 == '':
 					the_card_link7 = '%s%s' % (cardlinkstart,card)
 					the_card7 = string.capwords(card.replace('-',' '))
@@ -177,51 +186,52 @@ for comment in comments:
 				the_reply = '  [%s%s](%s)' % (the_card, event_caller, the_result)
 		if the_card2 != '' and the_event2 != '':
 			the_result2 = SoundFinder(the_card_link2,the_event2)
-			if the_result != None:
+			if the_result2 != None:
 				print '  [%s%s](%s)' % (the_card2, event_caller2, the_result2)
 				the_reply2 = '  [%s%s](%s)' % (the_card2, event_caller2, the_result2)
 		if the_card3 != '' and the_event3 != '':
 			the_result3 = SoundFinder(the_card_link3,the_event3)
-			if the_result != None:
+			if the_result3 != None:
 				print '  [%s%s](%s)' % (the_card3, event_caller3, the_result3)
 				the_reply3 = '  [%s%s](%s)' % (the_card3, event_caller3, the_result3)
 		if the_card4 != '' and the_event4 != '':
 			the_result4 = SoundFinder(the_card_link4,the_event4)
-			if the_result != None:
+			if the_result4 != None:
 				print '  [%s%s](%s)' % (the_card4, event_caller4, the_result4)
 				the_reply4 = '  [%s%s](%s)' % (the_card4, event_caller4, the_result4)
 		if the_card5 != '' and the_event5 != '':
 			the_result5 = SoundFinder(the_card_link5,the_event5)
-			if the_result != None:
+			if the_result5 != None:
 				print '  [%s%s](%s)' % (the_card5, event_caller5, the_result5)
 				the_reply5 = '  [%s%s](%s)' % (the_card5, event_caller5, the_result5)
 		if the_card6 != '' and the_event6 != '':
 			the_result6 = SoundFinder(the_card_link6,the_event6)
-			if the_result != None:
+			if the_result6 != None:
 				print '  [%s%s](%s)' % (the_card6, event_caller6, the_result6)
 				the_reply6 = '  [%s%s](%s)' % (the_card6, event_caller6, the_result6)
 		if the_card7 != '' and the_event7 != '':
 			the_result7 = SoundFinder(the_card_link7,the_event7)
-			if the_result != None:
+			if the_result7 != None:
 				print '  [%s%s](%s)' % (the_card7, event_caller7, the_result7)
 				the_reply7 = '  [%s%s](%s)' % (the_card7, event_caller7, the_result7)
 		if the_card8 != '' and the_event8 != '':
 			the_result8 = SoundFinder(the_card_link8,the_event8)
-			if the_result != None:
+			if the_result8 != None:
 				print '  [%s%s](%s)' % (the_card8, event_caller8, the_result8)
 				the_reply8 = '  [%s%s](%s)' % (the_card8, event_caller8, the_result8)
 		if the_card9 != '' and the_event9 != '':
 			the_result9 = SoundFinder(the_card_link9,the_event9)
-			if the_result != None:
+			if the_result9 != None:
 				print '  [%s%s](%s)' % (the_card9, event_caller9, the_result9)
 				the_reply9 = '  [%s%s](%s)' % (the_card9, event_caller9, the_result9)
 		if the_card10 != '' and the_event10 != '':
 			the_result10 = SoundFinder(the_card_link10,the_event10)
-			if the_result != None:
+			if the_result10 != None:
 				print '  [%s%s](%s)' % (the_card10, event_caller10, the_result10)
 				the_reply10 = '  [%s%s](%s)' % (the_card10, event_caller10, the_result10)
 
-
+#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
+#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to actually send the reply off to Reddit. 
 		if the_reply10 != '':
 			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
 			comment.reply(true_reply)
@@ -252,8 +262,11 @@ for comment in comments:
 		elif the_reply != '':
 			true_reply = '%s' % (the_reply)
 			comment.reply(true_reply)
-
+#Here all of the variables that could've been used are reset to blank as to avoid previous replies messing up future ones.  The cache is a list of all comments that have been replied to.
+#Its purpose is to prevent the bot from trying to reply to the same comment repeatedly.  Since reddit stream only reads the 100 latest comments I remove the 101st comment in the cache to free up space.
 		cache.append(comment.id)
+		if len(cache) == 101:
+			cache.pop(100)
 		true_reply = ''
 		the_card = ''
 		the_event = ''
