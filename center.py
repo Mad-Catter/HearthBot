@@ -4,6 +4,7 @@ import string
 import praw
 import secret
 import re
+import random
 reddit = praw.Reddit(client_id=secret.client_id, client_secret = secret.secret_id, user_agent = secret.user_agent, username = secret.username, password = secret.password)
 subreddit = reddit.subreddit('test')
 print reddit.read_only
@@ -60,6 +61,7 @@ the_event10 = ''
 the_reply10 = ''
 comment_list = []
 cache = []
+dice_roll = 1
 #This list is a placeholder for actual comments
 #comments = ['((lord-jaraxxus))','iron-juggernautwasdfaw','((play))','bolvar-fireblood', '((attack))','((death))','nexus-champion-saraad','((trigger))','bewitched-guardian', '((death))', 'marin-the-fox',
 #'((play))'
@@ -158,7 +160,7 @@ for comment in comments:
 				elif the_event10 == '':
 					the_event10 = line 
 					event_caller10 = EventFinder(the_event10)	
-		#This is where the actual message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
+		#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
 		#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
 		#It is formatted into []() which is Reddit's way of having hyperlinks in comments. 
 		if the_card != '' and the_event != '':
@@ -244,6 +246,33 @@ for comment in comments:
 		elif the_reply != '':
 			true_reply = '%s' % (the_reply)
 			comment.reply(true_reply)
+
+		#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous response.
+		#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
+		#Then if it is, the bot will get a random number from random.randint and then choose a a funny response to reply based off of the random number it gets.
+		if text == 'good-bot':
+			if comment.parent().author.name == secret.username:
+				dice_roll = random.randint(1,4)
+				if dice_roll == 1:
+					comment.reply('*Great bot')
+				elif dice_roll == 2:
+					comment.reply('Shut up baby, I know it!')
+				elif dice_roll == 3:
+					comment.reply('And I love you, random citizen!')
+				elif dice_roll == 4:
+					comment.reply('The obvious conclusion.')
+		if text == 'bad-bot':
+			if comment.parent().author.name == secret.username:
+				dice_roll = random.randint(1,4)
+				if dice_roll == 1:
+					comment.reply('Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest')
+				elif dice_roll == 2:
+					comment.reply('rank 25 player')
+				elif dice_roll == 3:
+					comment.reply('no u')
+				elif dice_roll == 4:
+					comment.reply('This is outrageous, it\'s unfair!')	
+
 		#Here all of the variables that could've been used are reset to blank as to avoid previous replies messing up future ones.  The cache is a list of all comments that have been replied to.
 		#Its purpose is to prevent the bot from trying to reply to the same comment repeatedly.
 		#Since Reddit stream only reads the 100 latest comments I remove the 101st comment in the cache to free up space.
