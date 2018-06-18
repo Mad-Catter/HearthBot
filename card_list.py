@@ -25,7 +25,7 @@ for link in list_of_lists:
 	for match in search2:
 		match = "%s" % (match.group(0))
 		match = match[1:len(match)-3]
-		match = "((%s))" % (match)
+		#match = "((%s))" % (match)
 		minion_list.append(match)
 	#The first search takes the string version of the link and searches for 'manual-data-link" href="/'.  Then it will add all characters from the string (limits aren't working for some reason) until
 	#it meets the last "data-id=".  It was supposed to stop at the first data id, but for some reason it went to the last.
