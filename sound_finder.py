@@ -13,7 +13,7 @@ def SoundFinder(link, event):
 	#See card_list for my horrendous explanation of regular expressions.
 	remove = 20
 	#The search terms for the regular expression change with which event is being searched for.  Start is where the search term is being kept.
-	#Remove is changed to match the characters of each search termm
+	#Remove is changed to match the amount of characters for each search termm
 	if event == "death":
 		start = 'DEATH_SOUND","url"'
 	elif event == "play":

@@ -4,7 +4,7 @@ import re
 
 minion_list = []
 loop=1
-#Minion_list is the list of cardsthat will be imported into varios other parts of the bot.
+#Minion_list is the list of cards that will be imported into various other parts of the bot.
 list_of_lists = ['https://www.hearthpwn.com/cards/minion?display=1&filter-premium=1']
 #The list of lists contains all of the links to the card list on hearthpwn.  Hearthpwn has all of the cards spread out between differnt links as to not clutter the screen.
 while loop < 12:
@@ -31,12 +31,7 @@ for link in list_of_lists:
 	#it meets the last "data-id=".  It was supposed to stop at the first data id, but for some reason it went to the last.
 	#Basically the first search isolates the chunk of code where the cards are (between the first manual data link and last data id), but with a bunch of usless extra code too.
 	#So the second search(which is actually a finditer) does the heavy lifting in extracting the cards.  The second search adds everything between each - and " d, that isnt a white space or = sign.
-	#(\S isn't working for some reason.)  Since each idividual card is surround by a - and " d. Then the first charater and last three characters from the matches are removed (The search terms used in search2).
-	#Finally the matches are appended to the minion list, and it repeats until all the cards are added.    
-	
-
-
-#for card in minion_list:
-#	if card in dic_of_multiples:
-#		minion_list[minion_list.index(card)] = dic_of_multiples.get(card)
+	#(\S also isn't working for some reason.)  Since each idividual card is surround by a - and " d.
+	#Then the first charater and last three characters from the matches are removed (The search terms used in search2).
+	#Finally the matches are appended to the minion list, and it repeats until all the cards are added.
 print minion_list
