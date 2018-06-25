@@ -99,13 +99,13 @@ dice_roll = 1
 #The EventFinder looks at the event lines that are given for a link, and returns a message that is a bit better to read.
 def EventFinder(line_type):
 	if line_type == 'play':
-		return '\'s play line.'
+		return ' play line.'
 	elif line_type == 'attack':
-		return '\'s attack line.'
+		return ' attack line.'
 	elif line_type == 'death':
-		return '\'s death line.'
+		return ' death line.'
 	elif line_type == 'trigger':
-		return '\'s trigger line.'
+		return ' trigger line.'
 
 for comment in comments:
 	#This will check each individual comment in a list of comments(for comment in comments).  Comments is the .stream() talked about earlier.
@@ -389,6 +389,7 @@ for comment in comments:
 						card = dic_of_multiples.get(card)
 						the_card_link10 = '%s%s' % (cardlinkstart,card)
 		#This searches for through the comment for any events the same way the cards were searched for.  It then uses the event_caller to dress up the message a bit.
+		#In the example I stated earlier 'play' would be found in the list and have event finder return "\'s play line".
 		for line in comment_list:
 			if line in event_list:
 				if the_event == '':
@@ -423,57 +424,118 @@ for comment in comments:
 					event_caller10 = EventFinder(the_event10)	
 		#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
 		#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
-		#It is formatted into []() which is Reddit's way of having hyperlinks in comments. 
+		#It is formatted into []() which is Reddit's way of having hyperlinks in comments.
+		#In our example the_result would be "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_165_Play_01.ogg" and then "Druid of the Claw's [play line.](the_result)" 
 		if the_card != '' and the_event != '':
 			the_result = SoundFinder(the_card_link,the_event)
 			if the_result != None:
-				print '  [%s%s](%s)' % (the_card, event_caller, the_result)
-				the_reply = '  [%s%s](%s)' % (the_card, event_caller, the_result)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card, event_caller, the_result)
+				the_reply = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card, event_caller, the_result)
 		if the_card2 != '' and the_event2 != '':
 			the_result2 = SoundFinder(the_card_link2,the_event2)
 			if the_result2 != None:
-				print '  [%s%s](%s)' % (the_card2, event_caller2, the_result2)
-				the_reply2 = '  [%s%s](%s)' % (the_card2, event_caller2, the_result2)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card2, event_caller2, the_result2)
+				the_reply2 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card2, event_caller2, the_result2)
 		if the_card3 != '' and the_event3 != '':
 			the_result3 = SoundFinder(the_card_link3,the_event3)
 			if the_result3 != None:
-				print '  [%s%s](%s)' % (the_card3, event_caller3, the_result3)
-				the_reply3 = '  [%s%s](%s)' % (the_card3, event_caller3, the_result3)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card3, event_caller3, the_result3)
+				the_reply3 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card3, event_caller3, the_result3)
 		if the_card4 != '' and the_event4 != '':
 			the_result4 = SoundFinder(the_card_link4,the_event4)
 			if the_result4 != None:
-				print '  [%s%s](%s)' % (the_card4, event_caller4, the_result4)
-				the_reply4 = '  [%s%s](%s)' % (the_card4, event_caller4, the_result4)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card4, event_caller4, the_result4)
+				the_reply4 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card4, event_caller4, the_result4)
 		if the_card5 != '' and the_event5 != '':
 			the_result5 = SoundFinder(the_card_link5,the_event5)
 			if the_result5 != None:
-				print '  [%s%s](%s)' % (the_card5, event_caller5, the_result5)
-				the_reply5 = '  [%s%s](%s)' % (the_card5, event_caller5, the_result5)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card5, event_caller5, the_result5)
+				the_reply5 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card5, event_caller5, the_result5)
 		if the_card6 != '' and the_event6 != '':
 			the_result6 = SoundFinder(the_card_link6,the_event6)
 			if the_result6 != None:
-				print '  [%s%s](%s)' % (the_card6, event_caller6, the_result6)
-				the_reply6 = '  [%s%s](%s)' % (the_card6, event_caller6, the_result6)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card6, event_caller6, the_result6)
+				the_reply6 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card6, event_caller6, the_result6)
 		if the_card7 != '' and the_event7 != '':
 			the_result7 = SoundFinder(the_card_link7,the_event7)
 			if the_result7 != None:
-				print '  [%s%s](%s)' % (the_card7, event_caller7, the_result7)
-				the_reply7 = '  [%s%s](%s)' % (the_card7, event_caller7, the_result7)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card7, event_caller7, the_result7)
+				the_reply7 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card7, event_caller7, the_result7)
 		if the_card8 != '' and the_event8 != '':
 			the_result8 = SoundFinder(the_card_link8,the_event8)
 			if the_result8 != None:
-				print '  [%s%s](%s)' % (the_card8, event_caller8, the_result8)
-				the_reply8 = '  [%s%s](%s)' % (the_card8, event_caller8, the_result8)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card8, event_caller8, the_result8)
+				the_reply8 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card8, event_caller8, the_result8)
 		if the_card9 != '' and the_event9 != '':
 			the_result9 = SoundFinder(the_card_link9,the_event9)
 			if the_result9 != None:
-				print '  [%s%s](%s)' % (the_card9, event_caller9, the_result9)
-				the_reply9 = '  [%s%s](%s)' % (the_card9, event_caller9, the_result9)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card9, event_caller9, the_result9)
+				the_reply9 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card9, event_caller9, the_result9)
 		if the_card10 != '' and the_event10 != '':
 			the_result10 = SoundFinder(the_card_link10,the_event10)
 			if the_result10 != None:
-				print '  [%s%s](%s)' % (the_card10, event_caller10, the_result10)
-				the_reply10 = '  [%s%s](%s)' % (the_card10, event_caller10, the_result10)
+				print '''* %s\'s[%s](%s) 
+
+
+''' % (the_card10, event_caller10, the_result10)
+				the_reply10 = '''* %s\'s[%s](%s) 
+
+
+''' % (the_card10, event_caller10, the_result10)
 
 		#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 		#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
