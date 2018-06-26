@@ -5,6 +5,7 @@ import praw
 import secret
 import re
 from random import randint
+import time
 #SoundFinder (my own creation) is imported to get the links to the sounds from hearthhead.  capwords is imported from string to capitalize each word of a card name).
 #praw is a module made specifically to help people make their own reddit bots... which I am using to make my own reddit bot.  secret holds information for praw which I don't want to pubically share.
 #re is imported to better search for cards in comments and randint is imported to create a random number for later.
@@ -134,522 +135,590 @@ for comment in comments:
 		#If an entry is a card, the bot will then check to see how many responses have already been written "if the_card# =='':" (the bot will only write 10 responses per comment). 
 		#Dic_of_grammar is a list of cards that needed to prepared for a response earlier and so they don't need to be redone here, thus the check "if card not in dic_of_grammar".
 		#The bot will take unprepared cards and capitalize the start of each word and change the dashes back into spaces. In order to write the card like it is written ingame.
-		for card in comment_list:
-			if card in minion_list:
-				if the_card == '':
-					if card not in dic_of_grammar:
-						the_card = capwords(card.replace('-',' '))
-						#However capwords will also capitalize "the" and "of".
-						#To fix this the bot checks if the_card has either "the" or "of" in it by taking each word of the card and making it its own entry in a list using spilt().
-						#If any word is equal to "the" or "of", the list gets saved as "the_spliiter".
-						#The location of the "the" or "of" in the list is saved inside "replaceindex".  The word is then removed from the_splitter list.
-						#The removed word is changed into lowercase and readded at its previous location.
-						#After doing this the_card# is made blank then each word in the_splitter is idividually readded into the_card.
-
-						#So in our example 'druid-of-the-claw' would be taken from the comment_list, changed into 'Druid Of The Claw', then into ['Druid','Of','The','Claw'].
-						#After that into ['Druid','The','Claw'], into ['Druid','of','The','Claw'], into ['Druid','of','Claw'], then into ['Druid','of','the','Claw'], and finally 'Druid of the Claw'
-						if 'The' in the_card.split() or 'Of' in the_card.split():
-							the_splitter = the_card.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card = dic_of_grammar.get(card)
-					#This is where the link to hearthhead for any indivdual card is made.  If the card is in dic_of_multiples the link gets a number and a dash added to it.
-					#In our example the_card_link would be "http://www.hearthhead.com/cards/druid-of-the-claw". Dic cards would be something like http://www.hearthhead.com/cards/kelthuzad-1
-					if card not in dic_of_multiples:
-						the_card_link = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link = '%s%s' % (cardlinkstart,card)
-				#Everything gets repeated upto 9 more times for any other cards written in the comment.
-				elif the_card2 == '':
-					if card not in dic_of_grammar:
-						the_card2 = capwords(card.replace('-',' '))
-						if 'The' in the_card2.split() or 'Of' in the_card2.split():
-							the_splitter = the_card2.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card2 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card2 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link2 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link2 = '%s%s' % (cardlinkstart,card)
-				elif the_card3 == '':
-					if card not in dic_of_grammar:
-						the_card3 = capwords(card.replace('-',' '))
-						if 'The' in the_card3.split() or 'Of' in the_card3.split():
-							the_splitter = the_card3.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card3 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card3 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link3 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link3 = '%s%s' % (cardlinkstart,card)
-				elif the_card4 == '':
-					if card not in dic_of_grammar:
-						the_card4 = capwords(card.replace('-',' '))
-						if 'The' in the_card4.split() or 'Of' in the_card4.split():
-							the_splitter = the_card4.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card4 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card4 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link4 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link4 = '%s%s' % (cardlinkstart,card)
-				elif the_card5 == '':
-					if card not in dic_of_grammar:
-						the_card5 = capwords(card.replace('-',' '))
-						if 'The' in the_card5.split() or 'Of' in the_card5.split():
-							the_splitter = the_card5.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card5 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card5 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link5 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link5 = '%s%s' % (cardlinkstart,card)
-				elif the_card6 == '':
-					if card not in dic_of_grammar:
-						the_card6 =capwords(card.replace('-',' '))
-						if 'The' in the_card6.split() or 'Of' in the_card6.split():
-							the_splitter = the_card6.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card6 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card6 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link6 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link6 = '%s%s' % (cardlinkstart,card)
-				elif the_card7 == '':
-					if card not in dic_of_grammar:
-						the_card7 = capwords(card.replace('-',' '))
-						if 'The' in the_card7.split() or 'Of' in the_card7.split():
-							the_splitter = the_card7.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card7 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card7 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link7 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link7 = '%s%s' % (cardlinkstart,card)
-				elif the_card8 == '':
-					if card not in dic_of_grammar:
-						the_card8 = capwords(card.replace('-',' '))
-						if 'The' in the_card8.split() or 'Of' in the_card8.split():
-							the_splitter = the_card8.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card8 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card8 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link8 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link8 = '%s%s' % (cardlinkstart,card)
-				elif the_card9 == '':
-					if card not in dic_of_grammar:
-						the_card9 = capwords(card.replace('-',' '))
-						if 'The' in the_card9.split() or 'Of' in the_card9.split():
-							the_splitter = the_card9.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card9 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card9 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link9 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link9 = '%s%s' % (cardlinkstart,card)
-				elif the_card10 == '':
-					if card not in dic_of_grammar:
-						the_card10 = capwords(card.replace('-',' '))
-						if 'The' in the_card10.split() or 'Of' in the_card10.split():
-							the_splitter = the_card10.split()
-							for word in the_splitter:
-								if word == 'The':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								if word == 'Of':
-									replaceindex = the_splitter.index(word)
-									the_splitter.remove(word)
-									word = word.lower()
-									the_splitter.insert(replaceindex,word)
-								the_card10 = ' '.join(the_splitter)
-					if card in dic_of_grammar:
-						the_card10 = dic_of_grammar.get(card)
-					if card not in dic_of_multiples:
-						the_card_link10 = '%s%s' % (cardlinkstart,card)
-					elif card in dic_of_multiples:
-						card = dic_of_multiples.get(card)
-						the_card_link10 = '%s%s' % (cardlinkstart,card)
-		#This searches for through the comment for any events the same way the cards were searched for.  It then uses the event_caller to dress up the message a bit.
-		#In the example I stated earlier 'play' would be found in the list and have event finder return "\'s play line".
-		for line in comment_list:
-			if line in event_list:
-				if the_event == '':
-					the_event = line
-					event_caller = EventFinder(the_event)
-				elif the_event2 == '':
-					the_event2 = line
-					event_caller2 = EventFinder(the_event2)
-				elif the_event3 == '':
-					the_event3 = line 
-					event_caller3 = EventFinder(the_event3)
-				elif the_event4 == '':
-					the_event4 = line 
-					event_caller4 = EventFinder(the_event4)
-				elif the_event5 == '':
-					the_event5 = line 
-					event_caller5 = EventFinder(the_event5)
-				elif the_event6 == '':
-					the_event6 = line 
-					event_caller6 = EventFinder(the_event6)
-				elif the_event7 == '':
-					the_event7 = line 
-					event_caller7 = EventFinder(the_event7)
-				elif the_event8 == '':
-					the_event8 = line 
-					event_caller8 = EventFinder(the_event8)
-				elif the_event9 == '':
-					the_event9 = line 
-					event_caller9 = EventFinder(the_event9)
-				elif the_event10 == '':
-					the_event10 = line 
-					event_caller10 = EventFinder(the_event10)	
-		#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
-		#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
-		#It is formatted into []() which is Reddit's way of having hyperlinks in comments.
-		#In our example the_result would be "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_165_Play_01.ogg" and then "Druid of the Claw's [play line.](the_result)" 
-		if the_card != '' and the_event != '':
-			the_result = SoundFinder(the_card_link,the_event)
-			if the_result != None:
-				print '''* %s\'s[%s](%s) 
-
-
+		while True:
+			try:
+				for card in comment_list:
+					if card in minion_list:
+						if the_card == '':
+							if card not in dic_of_grammar:
+								the_card = capwords(card.replace('-',' '))
+								#However capwords will also capitalize "the" and "of".
+								#To fix this the bot checks if the_card has either "the" or "of" in it by taking each word of the card and making it its own entry in a list using spilt().
+								#If any word is equal to "the" or "of", the list gets saved as "the_spliiter".
+								#The location of the "the" or "of" in the list is saved inside "replaceindex".  The word is then removed from the_splitter list.
+								#The removed word is changed into lowercase and readded at its previous location.
+								#After doing this the_card# is made blank then each word in the_splitter is idividually readded into the_card.
+		
+								#So in our example 'druid-of-the-claw' would be taken from the comment_list, changed into 'Druid Of The Claw', then into ['Druid','Of','The','Claw'].
+								#After that into ['Druid','The','Claw'], into ['Druid','of','The','Claw'], into ['Druid','of','Claw'], then into ['Druid','of','the','Claw'], and finally 'Druid of the Claw'
+								if 'The' in the_card.split() or 'Of' in the_card.split():
+									the_splitter = the_card.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card = dic_of_grammar.get(card)
+							#This is where the link to hearthhead for any indivdual card is made.  If the card is in dic_of_multiples the link gets a number and a dash added to it.
+							#In our example the_card_link would be "http://www.hearthhead.com/cards/druid-of-the-claw". Dic cards would be something like http://www.hearthhead.com/cards/kelthuzad-1
+							if card not in dic_of_multiples:
+								the_card_link = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link = '%s%s' % (cardlinkstart,card)
+						#Everything gets repeated upto 9 more times for any other cards written in the comment.
+						elif the_card2 == '':
+							if card not in dic_of_grammar:
+								the_card2 = capwords(card.replace('-',' '))
+								if 'The' in the_card2.split() or 'Of' in the_card2.split():
+									the_splitter = the_card2.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card2 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card2 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link2 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link2 = '%s%s' % (cardlinkstart,card)
+						elif the_card3 == '':
+							if card not in dic_of_grammar:
+								the_card3 = capwords(card.replace('-',' '))
+								if 'The' in the_card3.split() or 'Of' in the_card3.split():
+									the_splitter = the_card3.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card3 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card3 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link3 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link3 = '%s%s' % (cardlinkstart,card)
+						elif the_card4 == '':
+							if card not in dic_of_grammar:
+								the_card4 = capwords(card.replace('-',' '))
+								if 'The' in the_card4.split() or 'Of' in the_card4.split():
+									the_splitter = the_card4.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card4 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card4 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link4 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link4 = '%s%s' % (cardlinkstart,card)
+						elif the_card5 == '':
+							if card not in dic_of_grammar:
+								the_card5 = capwords(card.replace('-',' '))
+								if 'The' in the_card5.split() or 'Of' in the_card5.split():
+									the_splitter = the_card5.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card5 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card5 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link5 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link5 = '%s%s' % (cardlinkstart,card)
+						elif the_card6 == '':
+							if card not in dic_of_grammar:
+								the_card6 =capwords(card.replace('-',' '))
+								if 'The' in the_card6.split() or 'Of' in the_card6.split():
+									the_splitter = the_card6.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card6 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card6 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link6 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link6 = '%s%s' % (cardlinkstart,card)
+						elif the_card7 == '':
+							if card not in dic_of_grammar:
+								the_card7 = capwords(card.replace('-',' '))
+								if 'The' in the_card7.split() or 'Of' in the_card7.split():
+									the_splitter = the_card7.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card7 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card7 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link7 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link7 = '%s%s' % (cardlinkstart,card)
+						elif the_card8 == '':
+							if card not in dic_of_grammar:
+								the_card8 = capwords(card.replace('-',' '))
+								if 'The' in the_card8.split() or 'Of' in the_card8.split():
+									the_splitter = the_card8.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card8 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card8 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link8 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link8 = '%s%s' % (cardlinkstart,card)
+						elif the_card9 == '':
+							if card not in dic_of_grammar:
+								the_card9 = capwords(card.replace('-',' '))
+								if 'The' in the_card9.split() or 'Of' in the_card9.split():
+									the_splitter = the_card9.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card9 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card9 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link9 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link9 = '%s%s' % (cardlinkstart,card)
+						elif the_card10 == '':
+							if card not in dic_of_grammar:
+								the_card10 = capwords(card.replace('-',' '))
+								if 'The' in the_card10.split() or 'Of' in the_card10.split():
+									the_splitter = the_card10.split()
+									for word in the_splitter:
+										if word == 'The':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										if word == 'Of':
+											replaceindex = the_splitter.index(word)
+											the_splitter.remove(word)
+											word = word.lower()
+											the_splitter.insert(replaceindex,word)
+										the_card10 = ' '.join(the_splitter)
+							if card in dic_of_grammar:
+								the_card10 = dic_of_grammar.get(card)
+							if card not in dic_of_multiples:
+								the_card_link10 = '%s%s' % (cardlinkstart,card)
+							elif card in dic_of_multiples:
+								card = dic_of_multiples.get(card)
+								the_card_link10 = '%s%s' % (cardlinkstart,card)
+				#This searches for through the comment for any events the same way the cards were searched for.  It then uses the event_caller to dress up the message a bit.
+				#In the example I stated earlier 'play' would be found in the list and have event finder return "\'s play line".
+				for line in comment_list:
+					if line in event_list:
+						if the_event == '':
+							the_event = line
+							event_caller = EventFinder(the_event)
+						elif the_event2 == '':
+							the_event2 = line
+							event_caller2 = EventFinder(the_event2)
+						elif the_event3 == '':
+							the_event3 = line 
+							event_caller3 = EventFinder(the_event3)
+						elif the_event4 == '':
+							the_event4 = line 
+							event_caller4 = EventFinder(the_event4)
+						elif the_event5 == '':
+							the_event5 = line 
+							event_caller5 = EventFinder(the_event5)
+						elif the_event6 == '':
+							the_event6 = line 
+							event_caller6 = EventFinder(the_event6)
+						elif the_event7 == '':
+							the_event7 = line 
+							event_caller7 = EventFinder(the_event7)
+						elif the_event8 == '':
+							the_event8 = line 
+							event_caller8 = EventFinder(the_event8)
+						elif the_event9 == '':
+							the_event9 = line 
+							event_caller9 = EventFinder(the_event9)
+						elif the_event10 == '':
+							the_event10 = line 
+							event_caller10 = EventFinder(the_event10)	
+				#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
+				#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
+				#It is formatted into []() which is Reddit's way of having hyperlinks in comments.
+				#In our example the_result would be "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_165_Play_01.ogg" and then "Druid of the Claw's [play line.](the_result)" 
+				if the_card != '' and the_event != '':
+					the_result = SoundFinder(the_card_link,the_event)
+					if the_result != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card, event_caller, the_result)
-				the_reply = '''* %s\'s[%s](%s) 
-
-
+						the_reply = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card, event_caller, the_result)
-		if the_card2 != '' and the_event2 != '':
-			the_result2 = SoundFinder(the_card_link2,the_event2)
-			if the_result2 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card2 != '' and the_event2 != '':
+					the_result2 = SoundFinder(the_card_link2,the_event2)
+					if the_result2 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card2, event_caller2, the_result2)
-				the_reply2 = '''* %s\'s[%s](%s) 
-
-
+						the_reply2 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card2, event_caller2, the_result2)
-		if the_card3 != '' and the_event3 != '':
-			the_result3 = SoundFinder(the_card_link3,the_event3)
-			if the_result3 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card3 != '' and the_event3 != '':
+					the_result3 = SoundFinder(the_card_link3,the_event3)
+					if the_result3 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card3, event_caller3, the_result3)
-				the_reply3 = '''* %s\'s[%s](%s) 
-
-
+						the_reply3 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card3, event_caller3, the_result3)
-		if the_card4 != '' and the_event4 != '':
-			the_result4 = SoundFinder(the_card_link4,the_event4)
-			if the_result4 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card4 != '' and the_event4 != '':
+					the_result4 = SoundFinder(the_card_link4,the_event4)
+					if the_result4 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card4, event_caller4, the_result4)
-				the_reply4 = '''* %s\'s[%s](%s) 
-
-
+						the_reply4 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card4, event_caller4, the_result4)
-		if the_card5 != '' and the_event5 != '':
-			the_result5 = SoundFinder(the_card_link5,the_event5)
-			if the_result5 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card5 != '' and the_event5 != '':
+					the_result5 = SoundFinder(the_card_link5,the_event5)
+					if the_result5 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card5, event_caller5, the_result5)
-				the_reply5 = '''* %s\'s[%s](%s) 
-
-
+						the_reply5 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card5, event_caller5, the_result5)
-		if the_card6 != '' and the_event6 != '':
-			the_result6 = SoundFinder(the_card_link6,the_event6)
-			if the_result6 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card6 != '' and the_event6 != '':
+					the_result6 = SoundFinder(the_card_link6,the_event6)
+					if the_result6 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card6, event_caller6, the_result6)
-				the_reply6 = '''* %s\'s[%s](%s) 
-
-
+						the_reply6 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card6, event_caller6, the_result6)
-		if the_card7 != '' and the_event7 != '':
-			the_result7 = SoundFinder(the_card_link7,the_event7)
-			if the_result7 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card7 != '' and the_event7 != '':
+					the_result7 = SoundFinder(the_card_link7,the_event7)
+					if the_result7 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card7, event_caller7, the_result7)
-				the_reply7 = '''* %s\'s[%s](%s) 
-
-
+						the_reply7 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card7, event_caller7, the_result7)
-		if the_card8 != '' and the_event8 != '':
-			the_result8 = SoundFinder(the_card_link8,the_event8)
-			if the_result8 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card8 != '' and the_event8 != '':
+					the_result8 = SoundFinder(the_card_link8,the_event8)
+					if the_result8 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card8, event_caller8, the_result8)
-				the_reply8 = '''* %s\'s[%s](%s) 
-
-
+						the_reply8 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card8, event_caller8, the_result8)
-		if the_card9 != '' and the_event9 != '':
-			the_result9 = SoundFinder(the_card_link9,the_event9)
-			if the_result9 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card9 != '' and the_event9 != '':
+					the_result9 = SoundFinder(the_card_link9,the_event9)
+					if the_result9 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card9, event_caller9, the_result9)
-				the_reply9 = '''* %s\'s[%s](%s) 
-
-
+						the_reply9 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card9, event_caller9, the_result9)
-		if the_card10 != '' and the_event10 != '':
-			the_result10 = SoundFinder(the_card_link10,the_event10)
-			if the_result10 != None:
-				print '''* %s\'s[%s](%s) 
-
-
+				if the_card10 != '' and the_event10 != '':
+					the_result10 = SoundFinder(the_card_link10,the_event10)
+					if the_result10 != None:
+						print '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card10, event_caller10, the_result10)
-				the_reply10 = '''* %s\'s[%s](%s) 
-
-
+						the_reply10 = '''* %s\'s[%s](%s) 
+		
+		
 ''' % (the_card10, event_caller10, the_result10)
-
-		#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
-		#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
-		if the_reply10 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
-			comment.reply(true_reply)
-		elif the_reply9 != '':
-			true_reply = '%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9)
-			comment.reply(true_reply)
-		elif the_reply8 != '':
-			true_reply = '%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8)
-			comment.reply(true_reply)
-		elif the_reply7 != '':
-			true_reply = '%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7)
-			comment.reply(true_reply)
-		elif the_reply6 != '':
-			true_reply = '%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6)
-			comment.reply(true_reply)
-		elif the_reply5 != '':
-			true_reply = '%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5)
-			comment.reply(true_reply)
-		elif the_reply4 != '':
-			true_reply = '%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4)
-			comment.reply(true_reply)
-		elif the_reply3 != '':
-			true_reply = '%s%s%s' % (the_reply,the_reply2,the_reply3)
-			comment.reply(true_reply)
-		elif the_reply2 != '':
-			true_reply = '%s%s' % (the_reply,the_reply2)
-			comment.reply(true_reply)
-		elif the_reply != '':
-			true_reply = '%s' % (the_reply)
-			comment.reply(true_reply)
-
-		#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
-		#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
-		#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
-		if text == 'good-bot':
-			if comment.parent().author.name == secret.username:
-				dice_roll = randint(1,4)
-				if dice_roll == 1:
-					comment.reply('*Great bot')
-				elif dice_roll == 2:
-					comment.reply('Shut up baby, I know it!')
-				elif dice_roll == 3:
-					comment.reply('And I love you, random citizen!')
-				elif dice_roll == 4:
-					comment.reply('The obvious conclusion.')
-		if text == 'bad-bot':
-			if comment.parent().author.name == secret.username:
-				dice_roll = randint(1,4)
-				if dice_roll == 1:
-					comment.reply('Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest')
-				elif dice_roll == 2:
-					comment.reply('rank 25 player')
-				elif dice_roll == 3:
-					comment.reply('no u')
-				elif dice_roll == 4:
-					comment.reply('This is outrageous, it\'s unfair!')	
-
-		#Here, all of the variables that could've been used are reset to blank as to avoid previous replies messing up future ones.
-		#The cache is a list of all comments that have been replied to.  Since Reddit stream only reads the 100 latest comments I remove the 101st comment in the cache to free up space.
-		cache.append(comment.id)
-		if len(cache) == 101:
-			cache.pop(100)
-		true_reply = ''
-		the_card = ''
-		the_event = ''
-		the_reply = ''
-		the_card2 = ''
-		the_event2 = ''
-		the_reply2 = ''
-		the_card3 = ''
-		the_event3 = ''
-		the_reply3 = ''
-		the_card4 = ''
-		the_event4 = ''
-		the_reply4 = ''
-		the_card5 = ''
-		the_event5 = ''
-		the_reply5 = ''
-		the_card6 = ''
-		the_event6 = ''
-		the_reply6 = ''
-		the_card7 = ''
-		the_event7 = ''
-		the_reply7 = ''
-		the_card8 = ''
-		the_event8 = ''
-		the_reply8 = ''
-		the_card9 = ''
-		the_event9 = ''
-		the_reply9 = ''
-		the_card10 = ''
-		the_event10 = ''
-		the_reply10 = ''
-		the_result = None
-		event_caller = None
-		the_result2 = None
-		event_caller2 = None
-		the_result3 = None
-		event_caller3 = None
-		the_result4 = None
-		event_caller4 = None
-		the_result5 = None
-		event_caller5 = None
-		the_result6 = None
-		event_caller6 = None
-		the_result7 = None
-		event_caller7 = None
-		the_result8 = None
-		event_caller8 = None
-		the_result9 = None
-		event_caller9 = None
-		the_result10 = None
-		event_caller10 = None
-		comment_list = []
+		
+				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
+				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
+				if the_reply10 != '':
+					true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
+					comment.reply(true_reply)
+				elif the_reply9 != '':
+					true_reply = '%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9)
+					comment.reply(true_reply)
+				elif the_reply8 != '':
+					true_reply = '%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8)
+					comment.reply(true_reply)
+				elif the_reply7 != '':
+					true_reply = '%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7)
+					comment.reply(true_reply)
+				elif the_reply6 != '':
+					true_reply = '%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6)
+					comment.reply(true_reply)
+				elif the_reply5 != '':
+					true_reply = '%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5)
+					comment.reply(true_reply)
+				elif the_reply4 != '':
+					true_reply = '%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4)
+					comment.reply(true_reply)
+				elif the_reply3 != '':
+					true_reply = '%s%s%s' % (the_reply,the_reply2,the_reply3)
+					comment.reply(true_reply)
+				elif the_reply2 != '':
+					true_reply = '%s%s' % (the_reply,the_reply2)
+					comment.reply(true_reply)
+				elif the_reply != '':
+					true_reply = '%s' % (the_reply)
+					comment.reply(true_reply)
+		
+				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
+				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
+				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
+				if text == 'good-bot':
+					if comment.parent().author.name == secret.username:
+						dice_roll = randint(1,4)
+						if dice_roll == 1:
+							comment.reply('*Great bot')
+						elif dice_roll == 2:
+							comment.reply('Shut up baby, I know it!')
+						elif dice_roll == 3:
+							comment.reply('And I love you, random citizen!')
+						elif dice_roll == 4:
+							comment.reply('The obvious conclusion.')
+				if text == 'bad-bot':
+					if comment.parent().author.name == secret.username:
+						dice_roll = randint(1,4)
+						if dice_roll == 1:
+							comment.reply('Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest')
+						elif dice_roll == 2:
+							comment.reply('rank 25 player')
+						elif dice_roll == 3:
+							comment.reply('no u')
+						elif dice_roll == 4:
+							comment.reply('This is outrageous, it\'s unfair!')	
+		
+				#Here, all of the variables that could've been used are reset to blank as to avoid previous replies messing up future ones.
+				#The cache is a list of all comments that have been replied to.  Since Reddit stream only reads the 100 latest comments I remove the 101st comment in the cache to free up space.
+				cache.append(comment.id)
+				if len(cache) == 101:
+					cache.pop(100)
+				true_reply = ''
+				the_card = ''
+				the_event = ''
+				the_reply = ''
+				the_card2 = ''
+				the_event2 = ''
+				the_reply2 = ''
+				the_card3 = ''
+				the_event3 = ''
+				the_reply3 = ''
+				the_card4 = ''
+				the_event4 = ''
+				the_reply4 = ''
+				the_card5 = ''
+				the_event5 = ''
+				the_reply5 = ''
+				the_card6 = ''
+				the_event6 = ''
+				the_reply6 = ''
+				the_card7 = ''
+				the_event7 = ''
+				the_reply7 = ''
+				the_card8 = ''
+				the_event8 = ''
+				the_reply8 = ''
+				the_card9 = ''
+				the_event9 = ''
+				the_reply9 = ''
+				the_card10 = ''
+				the_event10 = ''
+				the_reply10 = ''
+				the_result = None
+				event_caller = None
+				the_result2 = None
+				event_caller2 = None
+				the_result3 = None
+				event_caller3 = None
+				the_result4 = None
+				event_caller4 = None
+				the_result5 = None
+				event_caller5 = None
+				the_result6 = None
+				event_caller6 = None
+				the_result7 = None
+				event_caller7 = None
+				the_result8 = None
+				event_caller8 = None
+				the_result9 = None
+				event_caller9 = None
+				the_result10 = None
+				event_caller10 = None
+			except praw.exceptions.APIException as e:
+				if e.error_type == 'RATELIMIT':
+					error_time = re.search(r'[\d][\d]?',str(e))
+					if error_time:
+						time_error = '%s' % (error_time.group(0))
+						time_error = int(time_error)
+					error_mins = re.search(r'minute',str(e))
+					if error_mins:
+						time_error = time_error*60
+					print e
+					print 'waiting for %s seconds' % time_error
+					true_reply = ''
+					the_card = ''
+					the_event = ''
+					the_reply = ''
+					the_card2 = ''
+					the_event2 = ''
+					the_reply2 = ''
+					the_card3 = ''
+					the_event3 = ''
+					the_reply3 = ''
+					the_card4 = ''
+					the_event4 = ''
+					the_reply4 = ''
+					the_card5 = ''
+					the_event5 = ''
+					the_reply5 = ''
+					the_card6 = ''
+					the_event6 = ''
+					the_reply6 = ''
+					the_card7 = ''
+					the_event7 = ''
+					the_reply7 = ''
+					the_card8 = ''
+					the_event8 = ''
+					the_reply8 = ''
+					the_card9 = ''
+					the_event9 = ''
+					the_reply9 = ''
+					the_card10 = ''
+					the_event10 = ''
+					the_reply10 = ''
+					the_result = None
+					event_caller = None
+					the_result2 = None
+					event_caller2 = None
+					the_result3 = None
+					event_caller3 = None
+					the_result4 = None
+					event_caller4 = None
+					the_result5 = None
+					event_caller5 = None
+					the_result6 = None
+					event_caller6 = None
+					the_result7 = None
+					event_caller7 = None
+					the_result8 = None
+					event_caller8 = None
+					the_result9 = None
+					event_caller9 = None
+					the_result10 = None
+					event_caller10 = None
+					time.sleep(time_error)
+					print 'DONE SLEEPING'
+					continue
+			comment_list = []
+			break
