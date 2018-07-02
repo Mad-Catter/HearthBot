@@ -34,4 +34,17 @@ for link in list_of_lists:
 	#(\S also isn't working for some reason.)  Since each idividual card is surround by a - and " d.
 	#Then the first charater and last three characters from the matches are removed (The search terms used in search2).
 	#Finally the matches are appended to the minion list, and it repeats until all the cards are added.
+
+#In hearthstone the 'Death Knight' cards have their own lines, and are worthy of being added to the bot.  However since the cards are not minions they do not get added to the minion list automatically.
+#So here they are being added semi-manually.
+death_knights = ['shadowreaper-anduin', 'thrall-deathseer', 'frost-lich-jaina', 'scourgelord-garrosh', 'valeera-the-hollow', 'bloodreaver-guldan', 'uther-of-the-ebon-blade', 'malfurion-the-pestilent']
+for entry in death_knights:
+	minion_list.append(entry)
+#The links I use for finding the sounds of the cards use the periods of the cards in their link.
+#However periods aren't caught in the automatic search, so the versions without periods are replaced with the versions with periods here.
+period_list = ['dr.-boom', 'venture-co.-mercenary']
+for entry in period_list:
+	minion_list.remove(entry.replace('.',''))
+	minion_list.append(entry)
+
 print minion_list
