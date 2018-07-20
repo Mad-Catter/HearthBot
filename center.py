@@ -29,6 +29,23 @@ dic_of_multiples = {'kelthuzad': 'kelthuzad-1', 'cthun': 'cthun-1', 'emperor-tha
 'the-darkness': 'the-darkness-2', 'prince-malchezaar': 'prince-malchezaar-4', 'valeera-the-hollow': 'valeera-the-hollow-1'}
 
 
+anduin = {'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR02_21.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_NoCards_19.ogg', 'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Death_17.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Concede_07.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_PIRATE_DAY_33.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR07_26.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_HAPPY_HALLOWEEN_13.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR08_27.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Well%20Played_02.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Thinking3_14.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_HAPPY_NEW_YEAR_15.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR06_25.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_LowCards_18.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_ERROR01_20.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Sorry_06.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR11_20.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_MIRROR_START_01.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_Thinking1_12.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_HAPPY_HOLIDAYS_14.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_Thanks_05.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_ERROR12_31.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_ERROR05_24.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Picked_08.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_Attack_16.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Greetings_01.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Weapon_10.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Start_09.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Time_11.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_09_ERROR03_22.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Threaten_04.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Thinking2_13.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR04_23.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_FIRE_FESTIVAL_32.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_Oops_03.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR10_29.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_ERROR09_28.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_HAPPY_NOBLEGARDEN_17.ogg'}
+garrosh = {'cant-play': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_ERROR09_28.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_ERROR10_29.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_HAPPY_HOLIDAYS_05.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_PIRATE_DAY_33.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR04_23.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Weapon_10.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Picked_08.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR11_20.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_LowCards_18.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_NoCards_19.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_WOW_11.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR02_21.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Thinking3_14.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Thanks_05.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Start_09.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_Time_11.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR08_27.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR03_22.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_Thinking2_13.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_HAPPY_HALLOWEEN_04.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Threaten_04.ogg', 'sorry-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Sorry_06_ALT.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_HAPPY_NEW_YEAR_06.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR06_25.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_ERROR01_20.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_Thinking1_12.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Oops_03.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Greetings_01.ogg', 'thanks-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Thanks_05_ALT.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_Attack_16.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Well%20Played_02.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR07_26.ogg', 'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Death_17.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Concede_07.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_Sorry_06.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_ERROR05_24.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_MIRROR_START_02.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_ERROR12_31.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName/hs/sounds/enus/VO_HERO_01_FIRE_FESTIVAL_32.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_01_HAPPY_NOBLEGARDEN_17.ogg'}
+guldan = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Death_17.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Well Played_02.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Attack_16.ogg', 'no-cards:': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_NoCards_19.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_FIRE_FESTIVAL_32.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Greetings_01.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Thinking3_14.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR02_21.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR03_22.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Time_11.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR08_27.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_WOW_06.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR09_28.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_HAPPY_HOLIDAYS_14.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR10_29.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_MIRROR_START_01.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Thinking2_13.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR11_20.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR04_23.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Threaten_04.ogg', 'oops-2':  'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Oops_03_ALT.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Weapon_10.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR05_24.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Sorry_06.ogg', 'thanks':  'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Thanks_05.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_HAPPY_HALLOWEEN_13.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Thinking1_12.ogg','low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_LowCards_18.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR12_31.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_HAPPY_NEW_YEAR_15.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_PIRATE_DAY_33.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR01_20.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR06_25.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Picked_08.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_ERROR07_26.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Oops_03.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Start_09.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_Concede_07.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_07_HAPPY_NOBLEGARDEN_17.ogre-magi'}
+uther = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Death_17.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_WellPlayed_02.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Attack_16.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_WOW_06.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR12_31.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR05_24.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Thinking3_14.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Oops_03.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_HAPPY_HOLIDAYS_14.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Thanks_05.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Start_09.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Picked_08.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_PIRATE_DAY_33.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR11_20.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR04_23.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_HAPPY_HALLOWEEN_13.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Time_11.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Sorry_06.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_HAPPY_NEW_YEAR_15.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR09_28.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Thinking2_13.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR10_29.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_MIRROR_START_01.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR03_22.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Thinking1_12.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_FIRE_FESTIVAL_32.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR08_27.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_NoCards_19.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR02_21.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_LowCards_18.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR07_26.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Weapon_10.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Greetings_01.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Concede_07.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR01_20.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_ERROR06_25.ogg', 'threaten':  'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_Threaten_04.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_04_HAPPY_NOBLEGARDEN_17.ogg'}
+rexxar = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Death_17.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Well Played_02.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Attack_16.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_FIRE_FESTIVAL_32.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Start_09.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_HAPPY_HALLOWEEN_13.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Time_11.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Concede_07.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_PIRATE_DAY_33.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_NoCards_20.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR08_28.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Thinking1_12.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR10_30.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Thinking2_13.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR09_29.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR03_23.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_WOW_06.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Weapon_10.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_HAPPY_NEW_YEAR_15.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR07_27.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR01_21.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR02_22.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Greetings_01.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR12_32.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Sorry_06.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Threaten_04.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR06_26.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Oops_03.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR04_24.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_HAPPY_HOLIDAYS_14.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Picked_08.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_LowCards_19.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Thanks_05.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR05_25.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_ERROR11_20.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_Thinking3_14.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_MIRROR_START_01.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_05_HAPPY_NOBLEGARDEN_17.ogg'}
+thrall = {'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_MIRROR_START_ALT_03.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_HAPPY_HALLOWEEN_05.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_HAPPY_HOLIDAYS_06.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_PIRATE_DAY_34.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_FIRE_FESTIVAL_33.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_WOW_12_ALT.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_HAPPY_NEW_YEAR_07.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_ERROR11_21.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_HAPPY_NEW_YEAR_LUNAR_16.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_02_HAPPY_NOBLEGARDEN_18.ogg'}
+valeera = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Death_17.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Well Played_02.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Attack_16.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Start_09.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_LowCards_18.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR03_22.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_HAPPY_NEW_YEAR_06.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR04_23.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Concede_07.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR10_29.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR09_28.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_FIRE_FESTIVAL_32.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR11_20.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Picked_08.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Thanks_05.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_HAPPY_HOLIDAYS_05.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_MIRROR_START_02.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR05_24.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Time_11.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_PIRATE_DAY_33.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_HAPPY_HALLOWEEN_04.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR06_25.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR12_31.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Threaten_04.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Thinking3_14.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR01_20.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Thinking2_13.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Greetings_01.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Oops_03.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR02_21.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR07_26.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_WOW_11.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_ERROR08_27.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_NoCards_19.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Thinking1_12.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Weapon_10.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_Sorry_06.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03_HAPPY_NOBLEGARDEN_17.ogg'}
+malfurion = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Death_17.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Well Played_02.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Attack_16.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_LowCards_18.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR05_24.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR11_20.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_MIRROR_START_01.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Weapon_10.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR01_20.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_PIRATE_DAY_33.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_HAPPY_HALLOWEEN_13.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Threaten_04.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Start_09.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR06_25.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR12_31.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR08_27.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_FIRE_FESTIVAL_32.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_HAPPY_HOLIDAYS_14.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_NoCards_19.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Time_11.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Thinking2_13.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR02_21.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Thinking3_14.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Sorry_06.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR07_26.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Concede_07.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Greetings_01.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR04_23.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Picked_08.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR09_28.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Oops_03.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR10_29.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Thanks_05.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_WOW_06.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_Thinking1_12.ogg', 'start-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_TYRANDE_36.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_ERROR03_22.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_HAPPY_NEW_YEAR_15.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_06_HAPPY_NOBLEGARDEN_17.ogg'}
+jaina = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Death_72.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Well Played_57.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Attack_71.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR05_79.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR11_20.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Thinking1_67.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Picked_63.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Thanks_60.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR04_78.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_HAPPY_HALLOWEEN_13.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Thinking2_68.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR10_84.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Greetings_56.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR09_83.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Weapon_65.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Start_64.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR03_77.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_LowCards_73.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_NoCards_74.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_HAPPY_NEW_YEAR_15.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR08_82.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Concede_62.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Threaten_59.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR02_76.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Sorry_61.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR07_81.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_FIRE_FESTIVAL_32.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_MIRROR_START_01.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Time_66.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_WOW_06.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR01_75.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_PIRATE_DAY_33.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR06_80.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_HAPPY_HOLIDAYS_14.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_ERROR12_86.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Thinking3_69.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_Oops_58.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08_HAPPY_NOBLEGARDEN_17.ogg'}
+rangaros_hero = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Death_63.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Well_Played_06.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Attack_15.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_HAPPY_NEW_YEAR_38.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Oops_07.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR08_58.ogg', 'party': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_PARTY_22.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Concede_11.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR02_52.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_PIRATE_DAY_45.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR04_54.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Time_48.ogg', 'greetings-event': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_HAPPY_EVENT_41.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_NoCards_50.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR10_60.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR09_59.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Thinking3_14.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR03_53.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Thinking2_13.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR12_62.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_FIRE_FESTIVAL_44.ogg', 'celebrate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_CELEBRATE_24.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_LowCards_49.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_HAPPY_HALLOWEEN_36.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Sorry_10.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR05_55.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR11_61.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR07_57.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_HAPPY_HOLIDAYS_37.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Thinking1_12.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Threaten_08.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_WOW_20.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR01_51.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_ERROR06_56.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Greetings_04.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_Thanks_09.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_BRM_027h_HAPPY_NOBLEGARDEN_39.ogg'}
+jaraxxus_hero = { 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Well Played_06.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_LowCards_19.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323_Attack_02.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR04_24.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_HAPPY_NEW_YEAR_LUNAR_14.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR03_23.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_HAPPY_HOLIDAYS_12.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR10_30.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR09_29.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR05_25.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ConcedeALT_12.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Sorry_10.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Thanks_09.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR12_32.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Time_14.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_HAPPY_HALLOWEEN_11.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR11_31.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Thinking3_17.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_FIRE_FESTIVAL_29.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Threaten_08.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_HAPPY_NEW_YEAR_13.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR01_21.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_WOW_04.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Thinking2_16.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_PIRATE_DAY_30.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Oops_07.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR06_26.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_NoCards_20.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Thinking1_15.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR08_28.ogg', 'concede-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Concede_11.ogg', 'weapon-ready': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_Weapon_13.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR07_27.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_ERROR02_22.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_323h_HAPPY_NOBLEGARDEN_15.ogg'}
+maiev = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_DEATH_63.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_PLAY_27.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_JUST_PLAYED_23.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_WELL_PLAYED_07.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_I_ATTACKED_22.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_MINION_ATTACKED_21.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_Attack_15.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_THINK1_12.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_THANKS_09.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_LOW_CARDS_17.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_HAPPY_NEW_YEAR_53.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_FULL_MINIONS_25.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_TAUNT_29.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_MIRROR_START_02.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_THREATEN_05.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_FIRE_FESTIVAL_59.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_PIRATE_DAY_60.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_CONCEDE_06.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_GENERIC_30.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_HAPPY_HALLOWEEN_51.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_WOW_35.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_START_01.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_HAPPY_HOLIDAYS_52.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_NEED_MANA_20.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_NO_CARDS_18.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_TIMER_16.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_HAND_FULL_24.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_NEED_WEAPON_19.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_TARGET_28.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_OOPS_08.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_GREETINGS_03.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_THINK2_13.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_THINK3_14.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_ERROR_STEALTH_26.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_SORRY_10.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_PICKED_11.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_03a_HAPPY_NOBLEGARDEN_54.ogg'}
+tyrande = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_DEATH_63.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_JUST_PLAYED_23.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_WELL_PLAYED_07.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_PLAY_27.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_MINION_ATTACKED_21.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_I_ATTACKED_22.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_Attack_15.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_OOPS_08.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_HAPPY_HOLIDAYS_52.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_HAND_FULL_24.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_WOW_35.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_PICKED_11.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_MIRROR_START_02.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_NO_CARDS_18.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_HAPPY_HALLOWEEN_51.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_SORRY_10.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_THANKS_09.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_PIRATE_DAY_60.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_THINK1_12.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_NEED_WEAPON_19.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_CONCEDE_06.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_LOW_CARDS_17.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_GREETINGS_03.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_TARGET_28.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_THREATEN_05.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_HAPPY_NEW_YEAR_01.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_STEALTH_26.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_START_01.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_TAUNT_29.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_THINK2_13.ogg', 'greetings-mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_MIRROR_GREETINGS_04.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_NEED_MANA_20.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_THINK3_14.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_FULL_MINIONS_25.ogg', 'start-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_MALFURION_64.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_ERROR_GENERIC_30.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_FIRE_FESTIVAL_59.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_TIMER_16.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09a_HAPPY_NOBLEGARDEN_54.ogg'}
+khadgar = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_DEATH_63_ALT.ogg', 'cant-play': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_PLAY_27.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_WELL_PLAYED_07.ogg', 'minion-sleep': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_JUST_PLAYED_23.ogg', 'minion-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_MINION_ATTACKED_21.ogg', 'hero-attacked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_I_ATTACKED_22.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_Attack_15.ogg', 'greetings-halloween': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_HAPPY_HALLOWEEN_51.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_START_01.ogg', 'generic-error': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_GENERIC_30.ogg', 'greetings-new-year': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_HAPPY_NEW_YEAR_53.ogg', 'greetings-fire': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_FIRE_FESTIVAL_59.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_CONCEDE_06.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_THANKS_09.ogg', 'picked': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_PICKED_11.ogg', 'invalid-target': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_TARGET_28.ogg', 'mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_MIRROR_START_02.ogg', 'too-many-minions': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_FULL_MINIONS_25.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_THREATEN_05.ogg', 'taunt': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_TAUNT_29.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_THINK3_14.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_TIMER_16.ogg', 'greetings-pirate': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_PIRATE_DAY_60.ogg', 'no-mana': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_NEED_MANA_20.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_OOPS_08.ogg', 'stealth': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_STEALTH_26.ogg', 'sorry': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_SORRY_10.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_THINK2_13.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_WOW_35.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_THINK1_12.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_LOW_CARDS_17.ogg', 'need-weapon': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_NEED_WEAPON_19.ogg', 'hand-full': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_ERROR_HAND_FULL_24.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_GREETINGS_03.ogg', 'greetings-mirror': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_MIRROR_GREETINGS_04.ogg', 'greetings-holidays': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_HAPPY_HOLIDAYS_52.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_NO_CARDS_18.ogg', 'greetings-noblegarden': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_08b_HAPPY_NOBLEGARDEN_54.ogg'}
+hagatha = {'hero-death': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Death_01.ogg', 'well-played': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Well_Played_01.ogg', 'start': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Play_02.ogg', 'hero-attack': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Attack_01.ogg', 'thinking-1': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Thinking_01.ogg', 'greetings': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Greetings_02.ogg', 'thinking-3': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Thinking_03.ogg', 'thinking-2': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Thinking_02.ogg', 'concede': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Concede_01.ogg', 'no-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_NoCards_01.ogg', 'wow': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Wow_01.ogg', 'oops': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Oops_01.ogg', 'limited-time': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Time_01.ogg', 'threaten': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Threaten_02.ogg', 'low-cards': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_LowCards_01.ogg', 'thanks': 'http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_GIL_504_Female_Orc_Thanks_01.ogg'}
+list_of_heroes = [anduin, garrosh, guldan, uther, rexxar, thrall, valeera, malfurion, jaina, rangaros_hero, jaraxxus_hero, maiev, tyrande, khadgar, hagatha]
+list_of_hero_names = ['anduin', 'garrosh', 'guldan', 'uther', 'rexxar', 'thrall', 'valeera', 'malfurion', 'jaina', 'rangaros_hero', 'jaraxxus_hero', 'maiev', 'tyrande', 'khadgar', 'hagatha']
 #This is a dictionary of any cards that have either a dash, comma, or apostrophe.  I then wrote their forms for the response since the normal cards wont have these written down.
 dic_of_grammar = {'cthun': 'C\'thun', 'nzoth-the-corruptor': 'N\'zoth, the Corruptor', 'yogg-saron-hopes-end': 'Yogg-Saron, Hope\'s End','yshaarj-rage-unbound': 'Y\'Shaarj, Rage Unbound',
 'anubarak': 'Anub\'arak', 'blade-of-cthun': 'Blade of C\'thun', 'malganis': 'Mal\'ganis', 'alakir-the-windlord': 'Al\'Akir the Windlord', 'kelthuzad': 'Kel\'Thuzad',
@@ -40,7 +57,7 @@ dic_of_grammar = {'cthun': 'C\'thun', 'nzoth-the-corruptor': 'N\'zoth, the Corru
 'bolvar-fireblood': 'Bolvar, Fireblood', 'mech-bear-cat': 'Mech-Bear-Cat', 'wind-up-burglebot': 'Wind-up Burglebot', 'mimirons-head': 'Mimiron\'s Head', 'muklas-champion': 'Mukla\'s Champion',
 'finja-the-flying-star': 'Finja, the Flying Star', 'ixlid-fungal-lord': 'Ixlid, Fungal Lord', 'nexus-champion-saraad': 'Nexus-Champion Saraad', 'psych-o-tron': 'Psych-O-Tron',
 'second-rate-bruiser': 'Second-Rate Bruiser', 'servant-of-yogg-saron': 'Servant of Yogg-Saron', 'shado-pan-rider':'Shado-Pan Rider', 'sunborne-valkyr': 'Sunborne Val\'kyr',
-'tolvir-warden': 'Tol\'vir warden', 'voljin': 'Vol\'jin', 'anubar-ambusher': "Anub'ar Ambusher", 'cthuns-chosen': 'C\'Thun\'s Chosen', 'faldorei-strider': 'Fal\'dorei Strider',
+'tolvir-warden': 'Tol\'vir warden', 'voljin': 'Vol\'jin', 'anubar-ambusher': "Anub\'ar Ambusher", 'cthuns-chosen': 'C\'Thun\'s Chosen', 'faldorei-strider': 'Fal\'dorei Strider',
 'arcane-nullifier-x-21': 'Arcane Nullifier X-21', 'bright-eyed-scout': 'Bright-Eyed Scout', 'enhance-o-mechano': 'Enhance-o Mechano', 'genzo-the-shark': 'Genzo, the Shark',
 'korkron-elite': 'Kor\'kron Elite', 'mogushan-warden': 'Mogu\'shan Warden', 'senjin-shieldmasta': 'Sen\'jin Shieldmasta', 'sherazin-corpse-flower': 'Sherazin, Corpse Flower',
 'gorillabot-a-3': 'Gorillabot A-3', 'klaxxi-amber-weaver': 'Klaxxi Amber-Weaver', 'mini-mage': 'Mini-Mage', 'old-murk-eye': 'Old Murk-Eye', 'tolvir-stoneshaper': 'Tol\'vir Stoneshaper',
@@ -49,7 +66,7 @@ dic_of_grammar = {'cthun': 'C\'thun', 'nzoth-the-corruptor': 'N\'zoth, the Corru
 'witchs-cauldron': 'Witch\'s Cauldron', 'alexstraszas-champion': 'Alexstrasza\'s Champion', 'captains-parrot': 'Captain\'s Parrot', 'annoy-o-tron': 'Annoy-o-Tron',
 'nat-the-darkfisher': 'Nat, the Darkfisher', 'kings-elekk': 'King\'s Elekk', 'medivhs-valet': 'Medivh\'s Valet', 'nerubar-weblord': 'Nerub\'ar Weblord', 'sorcerers-apprentice': 'Sorcerer\'s Apprentice',
 'ships-cannon': 'Ship\'s Cannon', 'goblin-auto-barber': 'Goblin Auto-Barber', 'one-eyed-cheat': 'One-Eyed Cheat', 'pint-sized-summoner': 'Pint-Sized Summoner', 'scorp-o-matic': 'Scorp-o-matic',
-'whirling-zap-o-matic': 'Whirling Zap-o-matic', 'small-time-buccaneer': 'Small-Time Buccaneer', 'malchezaars-imp': 'NMlchezaar\'s Imp', 'nzoths-first-mate': 'N\'zoth\'s First Mate',
+'whirling-zap-o-matic': 'Whirling Zap-o-matic', 'small-time-buccaneer': 'Small-Time Buccaneer', 'malchezaars-imp': 'Malchezaar\'s Imp', 'nzoths-first-mate': 'N\'zoth\'s First Mate',
 'tentacle-of-nzoth': 'Tentacle of N\'zoth', 'witchs-apprentice': 'Witch\'s Appretice','bloodreaver-guldan': 'Bloodreaver Gul\'dan'}
 
 #This is a list of all the minions currently in Hearthstone at the time of Witchwood.  It was made in card_list but copied into center so that the program doesn't have to remake the list each run.
@@ -100,7 +117,16 @@ the_reply10 = ''
 comment_list = []
 cache = []
 dice_roll = 1
-
+hero_card = False
+hero_card2 = False
+hero_card3 = False
+hero_card4 = False
+hero_card5 = False
+hero_card6 = False
+hero_card7 = False
+hero_card8 = False
+hero_card9 = False
+hero_card10 = False
 
 #The EventFinder looks at the event lines that are given for a link, and returns a message that is a bit better to read.
 def EventFinder(line_type):
@@ -398,6 +424,39 @@ for comment in comments:
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
 								the_card_link10 = '%s%s' % (cardlinkstart,card)
+					if card not in minion_list:
+						for hero in list_of_hero_names:
+							if card == hero:
+								if the_card == '':
+									the_card = capwords(hero)
+									hero_card = True
+								elif the_card2 == '':
+									the_card2 = capwords(hero)
+									hero_card2 = True
+								elif the_card3 == '':
+									the_card3 = capwords(hero)
+									hero_card3 = True
+								elif the_card4 == '':
+									the_card4 = capwords(hero)
+									hero_card4 = True
+								elif the_card5 == '':
+									the_card5 = capwords(hero)
+									hero_card5 = True
+								elif the_card6 == '':
+									the_card6 = capwords(hero)
+									hero_card6 = True
+								elif the_card7 == '':
+									the_card7 = capwords(hero)
+									hero_card7 = True
+								elif the_card8 == '':
+									the_card8 = capwords(hero)
+									hero_card8 = True
+								elif the_card9 == '':
+									the_card9 = capwords(hero)
+									hero_card9 = True
+								elif the_card10 == '':
+									the_card10 = capwords(hero)
+									hero_card10 = True
 				#This searches for through the comment for any events the same way the cards were searched for.  It then uses the event_caller to dress up the message a bit.
 				#In the example I stated earlier 'play' would be found in the list and have event finder return "\'s play line".
 				for line in comment_list:
@@ -432,154 +491,228 @@ for comment in comments:
 						elif the_event10 == '':
 							the_event10 = line 
 							event_caller10 = EventFinder(the_event10)	
+					if line not in event_list:
+						if the_card.lower() in list_of_hero_names and the_event == '':
+							entry_pos = list_of_hero_names.index(the_card.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event = entry.replace('-', ' ')
+										the_result = list_of_heroes[entry_pos].get(entry)
+						elif the_card2.lower() in list_of_hero_names and the_event2 == '':
+							entry_pos = list_of_hero_names.index(the_card2.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event2 = entry.replace('-', ' ')
+										the_result2 = list_of_heroes[entry_pos].get(entry)
+						elif the_card3.lower() in list_of_hero_names and the_event3 == '':
+							entry_pos = list_of_hero_names.index(the_card3.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event3 = entry.replace('-', ' ')
+										the_result3 = list_of_heroes[entry_pos].get(entry)
+						elif the_card4.lower() in list_of_hero_names and the_event4 == '':
+							entry_pos = list_of_hero_names.index(the_card4.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event4 = entry.replace('-', ' ')
+										the_result4 = list_of_heroes[entry_pos].get(entry)
+						elif the_card5.lower() in list_of_hero_names and the_event5 == '':
+							entry_pos = list_of_hero_names.index(the_card5.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event5 = entry.replace('-', ' ')
+										the_result5 = list_of_heroes[entry_pos].get(entry)
+						elif the_card6.lower() in list_of_hero_names and the_event6 == '':
+							entry_pos = list_of_hero_names.index(the_card6.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event6 = entry.replace('-', ' ')
+										the_result6 = list_of_heroes[entry_pos].get(entry)
+						elif the_card7.lower() in list_of_hero_names and the_event7 == '':
+							entry_pos = list_of_hero_names.index(the_card7.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event7 = entry.replace('-', ' ')
+										the_result7 = list_of_heroes[entry_pos].get(entry)
+						elif the_card8.lower() in list_of_hero_names and the_event8 == '':
+							entry_pos = list_of_hero_names.index(the_card8.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event8 = entry.replace('-', ' ')
+										the_result8 = list_of_heroes[entry_pos].get(entry)
+						elif the_card9.lower() in list_of_hero_names and the_event9 == '':
+							entry_pos = list_of_hero_names.index(the_card9.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event9 = entry.replace('-', ' ')
+										the_result9 = list_of_heroes[entry_pos].get(entry)
+						elif the_card10.lower() in list_of_hero_names and the_event10 == '':
+							entry_pos = list_of_hero_names.index(the_card10.lower())
+							for entry in list_of_heroes[entry_pos].keys():
+								if line == entry:
+										the_event10 = entry.replace('-', ' ')
+										the_result10 = list_of_heroes[entry_pos].get(entry)
+
 				#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
 				#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
 				#It is formatted into []() which is Reddit's way of having hyperlinks in comments.
 				#In our example the_result would be "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_165_Play_01.ogg" and then "Druid of the Claw's [play line.](the_result)" 
-				if the_card != '' and the_event != '':
+				if the_card != '' and the_event != '' and hero_card == False:
 					the_result = SoundFinder(the_card_link,the_event)
 					if the_result != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card, event_caller, the_result)
-						the_reply = '''* %s\'s[%s](%s) 
+						print the_reply
+				if the_card != '' and the_event != '' and hero_card == True:
+					if the_result != None:
+						the_reply = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card, event_caller, the_result)
-				if the_card2 != '' and the_event2 != '':
+''' % (the_card, the_event, the_result)
+					print the_reply
+				if the_card2 != '' and the_event2 != '' and hero_card2 == False:
 					the_result2 = SoundFinder(the_card_link2,the_event2)
 					if the_result2 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply2 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card2, event_caller2, the_result2)
-						the_reply2 = '''* %s\'s[%s](%s) 
+						print the_reply2
+				if the_card2 != '' and the_event2 != '' and hero_card2 == True:
+					if the_result2 != None:
+						the_reply2 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card2, event_caller2, the_result2)
-				if the_card3 != '' and the_event3 != '':
+''' % (the_card2, the_event2, the_result2)
+					print the_reply2
+				if the_card3 != '' and the_event3 != '' and hero_card3 == False:
 					the_result3 = SoundFinder(the_card_link3,the_event3)
 					if the_result3 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply3 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card3, event_caller3, the_result3)
-						the_reply3 = '''* %s\'s[%s](%s) 
+						print the_reply3
+				if the_card3 != '' and the_event3 != '' and hero_card3 == True:
+					if the_result3 != None:
+						the_reply3 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card3, event_caller3, the_result3)
-				if the_card4 != '' and the_event4 != '':
+''' % (the_card3, the_event3, the_result3)
+					print the_reply3
+				if the_card4 != '' and the_event4 != '' and hero_card4 == False:
 					the_result4 = SoundFinder(the_card_link4,the_event4)
 					if the_result4 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply4 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card4, event_caller4, the_result4)
-						the_reply4 = '''* %s\'s[%s](%s) 
+						print the_reply4
+				if the_card4 != '' and the_event4 != '' and hero_card4 == True:
+					if the_result4 != None:
+						the_reply4 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card4, event_caller4, the_result4)
-				if the_card5 != '' and the_event5 != '':
+''' % (the_card4, the_event4, the_result4)
+					print the_reply4
+				if the_card5 != '' and the_event5 != '' and hero_card5 == False:
 					the_result5 = SoundFinder(the_card_link5,the_event5)
 					if the_result5 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply5 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card5, event_caller5, the_result5)
-						the_reply5 = '''* %s\'s[%s](%s) 
+						print the_reply5
+				if the_card5 != '' and the_event5 != '' and hero_card5 == True:
+					if the_result5 != None:
+						the_reply5 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card5, event_caller5, the_result5)
-				if the_card6 != '' and the_event6 != '':
+''' % (the_card5, the_event5, the_result5)
+					print the_reply5
+				if the_card6 != '' and the_event6 != '' and hero_card6 == False:
 					the_result6 = SoundFinder(the_card_link6,the_event6)
 					if the_result6 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply6 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card6, event_caller6, the_result6)
-						the_reply6 = '''* %s\'s[%s](%s) 
+						print the_reply6
+				if the_card6 != '' and the_event6 != '' and hero_card6 == True:
+					if the_result6 != None:
+						the_reply6 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card6, event_caller6, the_result6)
-				if the_card7 != '' and the_event7 != '':
+''' % (the_card6, the_event6, the_result6)
+					print the_reply6
+				if the_card7 != '' and the_event7 != '' and hero_card7 == False:
 					the_result7 = SoundFinder(the_card_link7,the_event7)
 					if the_result7 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply7 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card7, event_caller7, the_result7)
-						the_reply7 = '''* %s\'s[%s](%s) 
+						print the_reply7
+				if the_card7 != '' and the_event7 != '' and hero_card7 == True:
+					if the_result7 != None:
+						the_reply7 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card7, event_caller7, the_result7)
-				if the_card8 != '' and the_event8 != '':
+''' % (the_card7, the_event7, the_result7)
+					print the_reply7
+				if the_card8 != '' and the_event8 != '' and hero_card8 == False:
 					the_result8 = SoundFinder(the_card_link8,the_event8)
 					if the_result8 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply8 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card8, event_caller8, the_result8)
-						the_reply8 = '''* %s\'s[%s](%s) 
+						print the_reply8
+				if the_card8 != '' and the_event8 != '' and hero_card8 == True:
+					if the_result8 != None:
+						the_reply8 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card8, event_caller8, the_result8)
-				if the_card9 != '' and the_event9 != '':
+''' % (the_card8, the_event8, the_result8)
+					print the_reply8
+				if the_card9 != '' and the_event9 != '' and hero_card9 == False:
 					the_result9 = SoundFinder(the_card_link9,the_event9)
 					if the_result9 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply9 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card9, event_caller9, the_result9)
-						the_reply9 = '''* %s\'s[%s](%s) 
+						print the_reply9
+				if the_card9 != '' and the_event9 != '' and hero_card9 == True:
+					if the_result9 != None:
+						the_reply9 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card9, event_caller9, the_result9)
-				if the_card10 != '' and the_event10 != '':
+''' % (the_card9, the_event9, the_result9)
+					print the_reply9
+				if the_card10 != '' and the_event10 != '' and hero_card10 == False:
 					the_result10 = SoundFinder(the_card_link10,the_event10)
 					if the_result10 != None:
-						print '''* %s\'s[%s](%s) 
+						the_reply10 = '''* %s\'s[%s](%s)
 		
 		
 ''' % (the_card10, event_caller10, the_result10)
-						the_reply10 = '''* %s\'s[%s](%s) 
+						print the_reply10
+				if the_card10 != '' and the_event10 != '' and hero_card10 == True:
+					if the_result10 != None:
+						the_reply10 = '''* %s\'s [%s line.](%s) 
 		
 		
-''' % (the_card10, event_caller10, the_result10)
+''' % (the_card10, the_event10, the_result10)
+					print the_reply10
 		
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
-				if the_reply10 != '':
+				if the_reply != '':
 					true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
 					comment.reply(true_reply)
-				elif the_reply9 != '':
-					true_reply = '%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9)
-					comment.reply(true_reply)
-				elif the_reply8 != '':
-					true_reply = '%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8)
-					comment.reply(true_reply)
-				elif the_reply7 != '':
-					true_reply = '%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7)
-					comment.reply(true_reply)
-				elif the_reply6 != '':
-					true_reply = '%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6)
-					comment.reply(true_reply)
-				elif the_reply5 != '':
-					true_reply = '%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5)
-					comment.reply(true_reply)
-				elif the_reply4 != '':
-					true_reply = '%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4)
-					comment.reply(true_reply)
-				elif the_reply3 != '':
-					true_reply = '%s%s%s' % (the_reply,the_reply2,the_reply3)
-					comment.reply(true_reply)
-				elif the_reply2 != '':
-					true_reply = '%s%s' % (the_reply,the_reply2)
-					comment.reply(true_reply)
-				elif the_reply != '':
-					true_reply = '%s' % (the_reply)
-					comment.reply(true_reply)
-		
 				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
 				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
 				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
@@ -662,6 +795,16 @@ for comment in comments:
 				event_caller9 = None
 				the_result10 = None
 				event_caller10 = None
+				hero_card = False
+				hero_card2 = False
+				hero_card3 = False
+				hero_card4 = False
+				hero_card5 = False
+				hero_card6 = False
+				hero_card7 = False
+				hero_card8 = False
+				hero_card9 = False
+				hero_card10 = False
 			except praw.exceptions.APIException as e:
 				if e.error_type == 'RATELIMIT':
 					error_time = re.search(r'[\d][\d]?',str(e))
@@ -670,9 +813,12 @@ for comment in comments:
 						time_error = int(time_error)
 					error_mins = re.search(r'minute',str(e))
 					if error_mins:
-						time_error = time_error*60
+						time_error = time_error*60 + 60
 					print e
 					print 'waiting for %s seconds' % time_error
+					time.sleep(time_error)
+					print 'DONE SLEEPING'
+					comment.reply(true_reply)
 					true_reply = ''
 					the_card = ''
 					the_event = ''
@@ -725,8 +871,17 @@ for comment in comments:
 					the_result10 = None
 					event_caller10 = None
 					comment_list = []
-					time.sleep(time_error)
-					print 'DONE SLEEPING'
+					hero_card = False
+					hero_card2 = False
+					hero_card3 = False
+					hero_card4 = False
+					hero_card5 = False
+					hero_card6 = False
+					hero_card7 = False
+					hero_card8 = False
+					hero_card9 = False
+					hero_card10 = False
+					
 					continue
 			comment_list = []
 			break

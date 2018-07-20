@@ -32,3 +32,47 @@ def SoundFinder(link, event):
 		sound_link = found[remove:len(found)]
 		#Found is the link + the search terms, while sound_link is purely the link to the sound.
 		return "http://media.services.zam.com/v1/media/byName/%s" % (sound_link)
+
+
+def HeroFinder(link,hero_list):
+	clean = str(BeautifulSoup(urllib2.urlopen(link).read(),'html.parser'))
+	remove=20
+	start = 'DEATH_SOUND","url"'
+	findall = re.findall(r'%s[\a-z|\s|A-Z]+.ogg' % (start),clean)
+	if findall:
+		for entry in findall:
+			found = entry
+			to_be_added = 'http://media.services.zam.com/v1/media/byName/%s' % (found[remove:len(found)])
+			hero_list.append(to_be_added)
+
+	start = 'PLAY_SOUND","url"'
+	remove = 19
+	findall = re.findall(r'%s[\a-z|\s|A-Z]+.ogg' % (start),clean)
+	if findall:
+		for entry in findall:
+			found = entry
+			to_be_added = 'http://media.services.zam.com/v1/media/byName/%s' % (found[remove:len(found)])
+			hero_list.append(to_be_added)
+	
+	start = 'ATTACK_SOUND","url"'
+	remove = 21
+	findall = re.findall(r'%s[\a-z|\s|A-Z]+.ogg' % (start),clean)
+	if findall:
+		for entry in findall:
+			found = entry
+			to_be_added = 'http://media.services.zam.com/v1/media/byName/%s' % (found[remove:len(found)])
+			hero_list.append(to_be_added)
+	
+
+	start = 'OTHER_SOUND","url"'
+	remove=20
+	findall = re.findall(r'%s[\a-z|\s|A-Z]+.ogg' % (start),clean)
+	if findall:
+		for entry in findall:
+			found = entry
+			to_be_added = 'http://media.services.zam.com/v1/media/byName/%s' % (found[remove:len(found)])
+			hero_list.append(to_be_added)
+	print hero_list
+#guldan = []
+#HeroFinder('http://www.hearthhead.com/cards/hagatha-the-witch', guldan)
+	
