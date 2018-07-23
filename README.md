@@ -1,2 +1,1 @@
-This will hopefully be a reddit bot that will search comments on the r/hearthstone subreddit to find quotes of in game cards.  It will then reply a link to the audio clip
-that mentioned.
+This is a reddit bot that will find that, when called, will reply a link to a specific audio file from the card game Hearthstone.  The bot searches comments for any card from the game surrounded in double parenthesis ((card name)) and the event the line is used in.  The events being played, attacking, dying, or being triggered.
