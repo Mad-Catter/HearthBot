@@ -716,7 +716,7 @@ for comment in comments:
 				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
 				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
 				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
-				if text == 'good-bot':
+				if text == 'good-bot' and comment.id not in cache:
 					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
 						if dice_roll == 1:
@@ -727,7 +727,7 @@ for comment in comments:
 							comment.reply('And I love you, random citizen!')
 						elif dice_roll == 4:
 							comment.reply('The obvious conclusion.')
-				if text == 'bad-bot':
+				if text == 'bad-bot' and comment.id not in cache:
 					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
 						if dice_roll == 1:
