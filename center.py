@@ -818,7 +818,30 @@ for comment in comments:
 					print 'waiting for %s seconds' % time_error
 					time.sleep(time_error)
 					print 'DONE SLEEPING'
-					comment.reply(true_reply)
+					if text == 'good-bot':
+						if comment.parent().author.name == os.environ.get('reddit_username'):
+							dice_roll = randint(1,4)
+							if dice_roll == 1:
+								comment.reply('*Great bot')
+							elif dice_roll == 2:
+								comment.reply('Shut up baby, I know it!')
+							elif dice_roll == 3:
+								comment.reply('And I love you, random citizen!')
+							elif dice_roll == 4:
+								comment.reply('The obvious conclusion.')
+					elif text == 'bad-bot':
+						if comment.parent().author.name == os.environ.get('reddit_username'):
+							dice_roll = randint(1,4)
+							if dice_roll == 1:
+								comment.reply('Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest')
+							elif dice_roll == 2:
+								comment.reply('rank 25 player')
+							elif dice_roll == 3:
+								comment.reply('no u')
+							elif dice_roll == 4:
+								comment.reply('This is outrageous, it\'s unfair!')
+					else:
+						comment.reply(true_reply)
 					cache.append(comment.id)
 					if len(cache) == 101:
 						cache.pop(0)
