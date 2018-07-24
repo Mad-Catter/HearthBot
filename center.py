@@ -819,6 +819,9 @@ for comment in comments:
 					time.sleep(time_error)
 					print 'DONE SLEEPING'
 					comment.reply(true_reply)
+					cache.append(comment.id)
+					if len(cache) == 101:
+						cache.pop(100)
 					true_reply = ''
 					the_card = ''
 					the_event = ''
