@@ -12,7 +12,7 @@ import time
 
 #This is the suggested setup for praw.  It takes the various ids hidden in secret to log the bot into reddit.
 #Then it will use .stream to put the last 100 comments written in a certain subreddit like r/hearthstone into a list.
-reddit = praw.Reddit(client_id=os.environ.get(reddit_client_id), client_secret = os.environ.get(reddit_secret_id), user_agent = os.environ.get(reddit_user_agent).replace('-',' '), username = os.environ.get(reddit_username), password = os.environ.get(reddit_password))
+reddit = praw.Reddit(client_id=os.environ.get('reddit_client_id'), client_secret = os.environ.get('reddit_secret_id'), user_agent = os.environ.get('reddit_user_agent').replace('-',' '), username = os.environ.get('reddit_username'), password = os.environ.get('reddit_password'))
 subreddit = reddit.subreddit('test')
 comments = subreddit.stream.comments()
 
@@ -717,7 +717,7 @@ for comment in comments:
 				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
 				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
 				if text == 'good-bot':
-					if comment.parent().author.name == os.environ.get(reddit_username):
+					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
 						if dice_roll == 1:
 							comment.reply('*Great bot')
@@ -728,7 +728,7 @@ for comment in comments:
 						elif dice_roll == 4:
 							comment.reply('The obvious conclusion.')
 				if text == 'bad-bot':
-					if comment.parent().author.name == os.environ.get(reddit_username):
+					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
 						if dice_roll == 1:
 							comment.reply('Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest')
