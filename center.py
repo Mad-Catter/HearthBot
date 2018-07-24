@@ -743,7 +743,7 @@ for comment in comments:
 				#The cache is a list of all comments that have been replied to.  Since Reddit stream only reads the 100 latest comments I remove the 101st comment in the cache to free up space.
 				cache.append(comment.id)
 				if len(cache) == 101:
-					cache.pop(100)
+					cache.pop(0)
 				true_reply = ''
 				the_card = ''
 				the_event = ''
@@ -821,7 +821,7 @@ for comment in comments:
 					comment.reply(true_reply)
 					cache.append(comment.id)
 					if len(cache) == 101:
-						cache.pop(100)
+						cache.pop(0)
 					true_reply = ''
 					the_card = ''
 					the_event = ''
