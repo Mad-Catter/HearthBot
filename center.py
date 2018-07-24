@@ -12,7 +12,7 @@ import time
 
 #This is the suggested setup for praw.  It takes the various ids hidden in secret to log the bot into reddit.
 #Then it will use .stream to put the last 100 comments written in a certain subreddit like r/hearthstone into a list.
-reddit = praw.Reddit(client_id=os.environ.get(reddit_client_id), client_secret = os.environ.get(reddit_secret_id), user_agent = os.environ.get(reddit_user_agent).replace('-',' '), username = os.environ.get(reddit_username,) password = os.environ.get(reddit_password))
+reddit = praw.Reddit(client_id=os.environ.get(reddit_client_id), client_secret = os.environ.get(reddit_secret_id), user_agent = os.environ.get(reddit_user_agent).replace('-',' '), username = os.environ.get(reddit_username). password = os.environ.get(reddit_password))
 subreddit = reddit.subreddit('test')
 comments = subreddit.stream.comments()
 
