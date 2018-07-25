@@ -808,85 +808,86 @@ for comment in comments:
 				hero_card10 = False
 			except praw.exceptions.APIException as e:
 				if e.error_type == 'RATELIMIT':
-					error_time = re.search(r'[\d][\d]?',str(e))
-					if error_time:
-						time_error = '%s' % (error_time.group(0))
-						time_error = int(time_error)
-					error_mins = re.search(r'minute',str(e))
-					if error_mins:
-						time_error = time_error*60 + 60
-					print e
-					print 'waiting for %s seconds' % time_error
-					time.sleep(time_error)
-					print 'DONE SLEEPING'
-					comment.reply(true_reply)
-					cache.append(comment.id)
-					if len(cache) == 101:
-						cache.pop(0)
-					true_reply = ''
-					the_card = ''
-					the_event = ''
-					the_reply = ''
-					the_card2 = ''
-					the_event2 = ''
-					the_reply2 = ''
-					the_card3 = ''
-					the_event3 = ''
-					the_reply3 = ''
-					the_card4 = ''
-					the_event4 = ''
-					the_reply4 = ''
-					the_card5 = ''
-					the_event5 = ''
-					the_reply5 = ''
-					the_card6 = ''
-					the_event6 = ''
-					the_reply6 = ''
-					the_card7 = ''
-					the_event7 = ''
-					the_reply7 = ''
-					the_card8 = ''
-					the_event8 = ''
-					the_reply8 = ''
-					the_card9 = ''
-					the_event9 = ''
-					the_reply9 = ''
-					the_card10 = ''
-					the_event10 = ''
-					the_reply10 = ''
-					the_result = None
-					event_caller = None
-					the_result2 = None
-					event_caller2 = None
-					the_result3 = None
-					event_caller3 = None
-					the_result4 = None
-					event_caller4 = None
-					the_result5 = None
-					event_caller5 = None
-					the_result6 = None
-					event_caller6 = None
-					the_result7 = None
-					event_caller7 = None
-					the_result8 = None
-					event_caller8 = None
-					the_result9 = None
-					event_caller9 = None
-					the_result10 = None
-					event_caller10 = None
-					comment_list = []
-					hero_card = False
-					hero_card2 = False
-					hero_card3 = False
-					hero_card4 = False
-					hero_card5 = False
-					hero_card6 = False
-					hero_card7 = False
-					hero_card8 = False
-					hero_card9 = False
-					hero_card10 = False
-					
-					continue
+					try:
+						error_time = re.search(r'[\d][\d]?',str(e))
+						if error_time:
+							time_error = '%s' % (error_time.group(0))
+							time_error = int(time_error)
+						error_mins = re.search(r'minute',str(e))
+						if error_mins:
+							time_error = time_error*60 + 60
+						print e
+						print 'waiting for %s seconds' % time_error
+						time.sleep(time_error)
+						print 'DONE SLEEPING'
+						comment.reply(true_reply)
+						cache.append(comment.id)
+						if len(cache) == 101:
+							cache.pop(0)
+						true_reply = ''
+						the_card = ''
+						the_event = ''
+						the_reply = ''
+						the_card2 = ''
+						the_event2 = ''
+						the_reply2 = ''
+						the_card3 = ''
+						the_event3 = ''
+						the_reply3 = ''
+						the_card4 = ''
+						the_event4 = ''
+						the_reply4 = ''
+						the_card5 = ''
+						the_event5 = ''
+						the_reply5 = ''
+						the_card6 = ''
+						the_event6 = ''
+						the_reply6 = ''
+						the_card7 = ''
+						the_event7 = ''
+						the_reply7 = ''
+						the_card8 = ''
+						the_event8 = ''
+						the_reply8 = ''
+						the_card9 = ''
+						the_event9 = ''
+						the_reply9 = ''
+						the_card10 = ''
+						the_event10 = ''
+						the_reply10 = ''
+						the_result = None
+						event_caller = None
+						the_result2 = None
+						event_caller2 = None
+						the_result3 = None
+						event_caller3 = None
+						the_result4 = None
+						event_caller4 = None
+						the_result5 = None
+						event_caller5 = None
+						the_result6 = None
+						event_caller6 = None
+						the_result7 = None
+						event_caller7 = None
+						the_result8 = None
+						event_caller8 = None
+						the_result9 = None
+						event_caller9 = None
+						the_result10 = None
+						event_caller10 = None
+						comment_list = []
+						hero_card = False
+						hero_card2 = False
+						hero_card3 = False
+						hero_card4 = False
+						hero_card5 = False
+						hero_card6 = False
+						hero_card7 = False
+						hero_card8 = False
+						hero_card9 = False
+						hero_card10 = False
+						
+						continue
 					except praw.exceptions.APIException as e:
 						if e.error_type == 'DELETED_COMMENT':
 							print "deleted comment error."
