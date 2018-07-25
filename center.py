@@ -745,7 +745,6 @@ for comment in comments:
 				cache.append(comment.id)
 				if len(cache) == 101:
 					cache.pop(0)
-				print cache
 				true_reply = ''
 				the_card = ''
 				the_event = ''
@@ -889,6 +888,7 @@ for comment in comments:
 					
 					continue
 				if e.error_type == 'DELETED_COMMENT':
+					print "deleted comment error."
 					true_reply = ''
 					the_card = ''
 					the_event = ''
@@ -951,6 +951,6 @@ for comment in comments:
 					hero_card8 = False
 					hero_card9 = False
 					hero_card10 = False
-					continue
+					break
 			comment_list = []
 			break
