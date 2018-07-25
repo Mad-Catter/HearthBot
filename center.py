@@ -708,28 +708,28 @@ for comment in comments:
 ''' % (the_card10, the_event10, the_result10)
 					print the_reply10
 		
-				if text == 'good-bot' and comment.id not in cache:
+				if text == 'good-bot':
 					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
 						if dice_roll == 1:
-							true_reply = '*Great bot'
+							the_reply = '*Great bot'
 						elif dice_roll == 2:
-							true_reply = 'Shut up baby, I know it!'
+							the_reply = 'Shut up baby, I know it!'
 						elif dice_roll == 3:
-							true_reply = 'And I love you, random citizen!'
+							the_reply = 'And I love you, random citizen!'
 						elif dice_roll == 4:
-							true_reply = 'The obvious conclusion.'
-				if text == 'bad-bot' and comment.id not in cache:
+							the_reply = 'The obvious conclusion.'
+				if text == 'bad-bot':
 					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
 						if dice_roll == 1:
-							true_reply = 'Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest'
+							the_reply = 'Hearthsound_bot still not good bot?u punks are never satisfied are you?Hope you love being bitter because I definitely love being the greatest'
 						elif dice_roll == 2:
-							true_reply = 'rank 25 player'
+							the_reply = 'rank 25 player'
 						elif dice_roll == 3:
-							true_reply = 'no u'
+							the_reply = 'no u'
 						elif dice_roll == 4:
-							true_reply = 'This is outrageous, it\'s unfair!'
+							the_reply = 'This is outrageous, it\'s unfair!'
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
 				if the_reply != '':
