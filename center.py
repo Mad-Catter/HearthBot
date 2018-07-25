@@ -708,14 +708,6 @@ for comment in comments:
 ''' % (the_card10, the_event10, the_result10)
 					print the_reply10
 		
-				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
-				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
-				if the_reply != '':
-					true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
-					comment.reply(true_reply)
-				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
-				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
-				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
 				if text == 'good-bot' and comment.id not in cache:
 					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
@@ -738,6 +730,15 @@ for comment in comments:
 							true_reply = 'no u'
 						elif dice_roll == 4:
 							true_reply = 'This is outrageous, it\'s unfair!'
+				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
+				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
+				if the_reply != '':
+					true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
+					comment.reply(true_reply)
+				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
+				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
+				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
+				
 		
 				#Here, all of the variables that could've been used are reset to blank as to avoid previous replies messing up future ones.
 				#The cache is a list of all comments that have been replied to.  Since Reddit stream only reads the 100 latest comments I remove the 101st comment in the cache to free up space.
