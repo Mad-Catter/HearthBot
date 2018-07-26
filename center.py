@@ -654,7 +654,7 @@ for comment in comments:
 							if the_event9 == '':
 								the_event9 = 'alternate'
 								event_caller9 = ' alternate play line.'
-							if the_event19 == '':
+							if the_event9 == '':
 								the_event10 = 'alternate'
 								event_caller10 = ' alternate play line.'
 				#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
