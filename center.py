@@ -17,8 +17,6 @@ subreddit = reddit.subreddit('test')
 comments = subreddit.stream.comments()
 
 
-#While most of the card sounds will have to be called by stating the card and type of sound, I plan to have a few famous sounds be called a bit eaiser.  Like the priest wow.
-wow = "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg"
 
 special_lines = {'wow':'"http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_HERO_09_WOW_06.ogg"',}
 
@@ -1314,6 +1312,9 @@ for comment in comments:
 							the_reply = 'no u'
 						elif dice_roll == 4:
 							the_reply = 'This is outrageous, it\'s unfair!'
+				if text == 'How long can this go on?':
+					if comment.parent().body == 'How long can this go on?':
+						the_reply == '[how long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
 				if the_reply != '':
