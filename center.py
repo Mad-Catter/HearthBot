@@ -26,7 +26,7 @@ special_lines = {'wow':'"http://media.services.zam.com/v1/media/byName//hs/sound
 #If a card is a boss in the game, they will have two different links on the hearthhead website.  So this is a dictonary of any cards with a differnt link from their name.
 dic_of_multiples = {'kelthuzad': 'kelthuzad-1', 'cthun': 'cthun-1', 'emperor-thaurissan': 'emperor-thaurissan-2', 'majordomo-executus': 'majordomo-executus-2', 'rend-blackhand': 'rend-blackhand-2',
 'chromaggus': 'chromaggus-2', 'nefarian': 'nefarian-7', 'blood-queen-lanathel': 'blood-queen-lanathel-2', 'professor-putricide': 'professor-putricide-1', 'sindragosa': 'sindragosa-4',
-'the-darkness': 'the-darkness-2', 'prince-malchezaar': 'prince-malchezaar-4', 'valeera-the-hollow': 'valeera-the-hollow-1', 'romulo': 'romulo-1', 'frozen-champion': 'frozen-champion-2'
+'the-darkness': 'the-darkness-2', 'prince-malchezaar': 'prince-malchezaar-4', 'valeera-the-hollow': 'valeera-the-hollow-1', 'romulo': 'romulo-1', 'frozen-champion': 'frozen-champion-2',
 'druid-of-the-swarm': 'druid-of-the-swarm-2', 'dorothee': 'dorothee-1'}
 
 
