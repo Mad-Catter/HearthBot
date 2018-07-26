@@ -640,7 +640,7 @@ for comment in comments:
 								the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Majordomo Executus':
 							if the_event == 'play':
-								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result = '/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event == 'attack':
 								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event == 'death':
@@ -703,7 +703,7 @@ for comment in comments:
 								the_result2 = SoundFinder(the_card_link2,the_event2)
 						elif the_card2 == 'Majordomo Executus':
 							if the_event2 == 'play':
-								the_result2 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event2 == 'attack':
 								the_result2 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event2 == 'death':
@@ -766,7 +766,7 @@ for comment in comments:
 								the_result3 = SoundFinder(the_card_link3,the_event3)
 						elif the_card3 == 'Majordomo Executus':
 							if the_event3 == 'play':
-								the_result3 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event3 == 'attack':
 								the_result3 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event3 == 'death':
@@ -829,7 +829,7 @@ for comment in comments:
 								the_result4 = SoundFinder(the_card_link4,the_event4)
 						elif the_card4 == 'Majordomo Executus':
 							if the_event4 == 'play':
-								the_result4 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event4 == 'attack':
 								the_result4 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event4 == 'death':
@@ -892,7 +892,7 @@ for comment in comments:
 								the_result5 = SoundFinder(the_card_link5,the_event5)
 						elif the_card5 == 'Majordomo Executus':
 							if the_event5 == 'play':
-								the_result5 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event5 == 'attack':
 								the_result5 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event5 == 'death':
@@ -955,7 +955,7 @@ for comment in comments:
 								the_result6 = SoundFinder(the_card_link6,the_event6)
 						elif the_card6 == 'Majordomo Executus':
 							if the_event6 == 'play':
-								the_result6 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event6 == 'attack':
 								the_result6 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event6 == 'death':
@@ -1018,7 +1018,7 @@ for comment in comments:
 								the_result7 = SoundFinder(the_card_link7,the_event7)
 						elif the_card7 == 'Majordomo Executus':
 							if the_event7 == 'play':
-								the_result7 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event7 == 'attack':
 								the_result7 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event7 == 'death':
@@ -1081,7 +1081,7 @@ for comment in comments:
 								the_result8 = SoundFinder(the_card_link8,the_event8)
 						elif the_card8 == 'Majordomo Executus':
 							if the_event8 == 'play':
-								the_result8 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event8 == 'attack':
 								the_result8 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event8 == 'death':
@@ -1144,7 +1144,7 @@ for comment in comments:
 								the_result9 = SoundFinder(the_card_link9,the_event9)
 						elif the_card9 == 'Majordomo Executus':
 							if the_event9 == 'play':
-								the_result9 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event9 == 'attack':
 								the_result9 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event9 == 'death':
@@ -1207,7 +1207,7 @@ for comment in comments:
 								the_result10 = SoundFinder(the_card_link10,the_event10)
 						elif the_card10 == 'Majordomo Executus':
 							if the_event10 == 'play':
-								the_result10 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA06_1_START_01.ogg' % (audio_link_start)
 							if the_event10 == 'attack':
 								the_result10 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event10 == 'death':
