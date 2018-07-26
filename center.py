@@ -624,7 +624,7 @@ for comment in comments:
 								elif the_event10 == '':
 									the_event10 = cthun_triggers[i]
 									event_caller10 = EventFinder('trigger')
-						if line == 'play-2':
+						if line == 'play-2' or line == 'alternate':
 							if the_event == '':
 								the_event = 'alternate'
 								event_caller = ' alternate play line.'
@@ -1344,9 +1344,9 @@ for comment in comments:
 							the_reply = 'no u'
 						elif dice_roll == 4:
 							the_reply = 'This is outrageous, it\'s unfair!'
-				if text == 'How long can this go on?':
-					if comment.parent().body == 'How long can this go on?':
-						the_reply == '[how long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
+				if text == 'how-long-can-this-go-on?':
+					if comment.parent().body == 'how-long-can-this-go-on?':
+						the_reply == '[How long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
 				if the_reply != '':
