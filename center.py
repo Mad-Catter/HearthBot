@@ -659,7 +659,55 @@ for comment in comments:
 ''' % (the_card, the_event, the_result)
 					print the_reply
 				if the_card2 != '' and the_event2 != '' and hero_card2 == False:
-					the_result2 = SoundFinder(the_card_link2,the_event2)
+					if the_card2 not in list_of_exceptions:
+						the_result2 = SoundFinder(the_card_link2,the_event2)
+					elif the_card2 in list_of_exceptions:
+						if the_card2 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result2 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result2 = SoundFinder(the_card_link2,the_event2)
+						elif the_card2 == 'Y\'Shaarj, Rage Unbound':
+							if the_event2 == 'play':
+								the_result2 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event2 == 'attack':
+								the_result2 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event2 == 'death':
+								the_result2 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card2 == 'N\'zoth, the Corruptor':
+							if the_event2 == 'play':
+								the_result2 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event2 == 'attack':
+								the_result2 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event2 == 'death':
+								the_result2 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card2 == 'Nefarian':
+							if the_event2 == 'death' or the_event2 == 'attack':
+								the_result2 = SoundFinder(the_card_link2,the_event2)
+							else:
+								the_result2 = '%s%s' % (audio_link_start,the_event2)
+						elif the_card2 == 'Rend Blackhand':
+							if the_event2 == 'play':
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event2 == 'attack':
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event2 == 'death':
+								the_result2 = SoundFinder(the_card_link2,the_event2)
+						elif the_card2 == 'Emperor Thaurissan':
+							if the_event2 == 'play':
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event2 == 'attack':
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event2 == 'death':
+								the_result2 = SoundFinder(the_card_link2,the_event2)
+						elif the_card2 == 'Majordomo Executus':
+							if the_event2 == 'play':
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event2 == 'attack':
+								the_result2 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event2 == 'death':
+								the_result2 = SoundFinder(the_card_link2,the_event2)
 					if the_result2 != None:
 						the_reply2 = '''* %s\'s[%s](%s)
 		
@@ -674,7 +722,55 @@ for comment in comments:
 ''' % (the_card2, the_event2, the_result2)
 					print the_reply2
 				if the_card3 != '' and the_event3 != '' and hero_card3 == False:
-					the_result3 = SoundFinder(the_card_link3,the_event3)
+					if the_card3 not in list_of_exceptions:
+						the_result3 = SoundFinder(the_card_link3,the_event3)
+					elif the_card3 in list_of_exceptions:
+						if the_card3 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result3 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result3 = SoundFinder(the_card_link3,the_event3)
+						elif the_card3 == 'Y\'Shaarj, Rage Unbound':
+							if the_event3 == 'play':
+								the_result3 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event3 == 'attack':
+								the_result3 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event3 == 'death':
+								the_result3 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card3 == 'N\'zoth, the Corruptor':
+							if the_event3 == 'play':
+								the_result3 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event3 == 'attack':
+								the_result3 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event3 == 'death':
+								the_result3 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card3 == 'Nefarian':
+							if the_event3 == 'death' or the_event3 == 'attack':
+								the_result3 = SoundFinder(the_card_link3,the_event3)
+							else:
+								the_result3 = '%s%s' % (audio_link_start,the_event3)
+						elif the_card3 == 'Rend Blackhand':
+							if the_event3 == 'play':
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event3 == 'attack':
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event3 == 'death':
+								the_result3 = SoundFinder(the_card_link3,the_event3)
+						elif the_card3 == 'Emperor Thaurissan':
+							if the_event3 == 'play':
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event3 == 'attack':
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event3 == 'death':
+								the_result3 = SoundFinder(the_card_link3,the_event3)
+						elif the_card3 == 'Majordomo Executus':
+							if the_event3 == 'play':
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event3 == 'attack':
+								the_result3 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event3 == 'death':
+								the_result3 = SoundFinder(the_card_link3,the_event3)
 					if the_result3 != None:
 						the_reply3 = '''* %s\'s[%s](%s)
 		
@@ -689,7 +785,55 @@ for comment in comments:
 ''' % (the_card3, the_event3, the_result3)
 					print the_reply3
 				if the_card4 != '' and the_event4 != '' and hero_card4 == False:
-					the_result4 = SoundFinder(the_card_link4,the_event4)
+					if the_card4 not in list_of_exceptions:
+						the_result4 = SoundFinder(the_card_link4,the_event4)
+					elif the_card4 in list_of_exceptions:
+						if the_card4 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result4 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result4 = SoundFinder(the_card_link4,the_event4)
+						elif the_card4 == 'Y\'Shaarj, Rage Unbound':
+							if the_event4 == 'play':
+								the_result4 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event4 == 'attack':
+								the_result4 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event4 == 'death':
+								the_result4 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card4 == 'N\'zoth, the Corruptor':
+							if the_event4 == 'play':
+								the_result4 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event4 == 'attack':
+								the_result4 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event4 == 'death':
+								the_result4 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card4 == 'Nefarian':
+							if the_event4 == 'death' or the_event4 == 'attack':
+								the_result4 = SoundFinder(the_card_link4,the_event4)
+							else:
+								the_result4 = '%s%s' % (audio_link_start,the_event4)
+						elif the_card4 == 'Rend Blackhand':
+							if the_event4 == 'play':
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event4 == 'attack':
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event4 == 'death':
+								the_result4 = SoundFinder(the_card_link4,the_event4)
+						elif the_card4 == 'Emperor Thaurissan':
+							if the_event4 == 'play':
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event4 == 'attack':
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event4 == 'death':
+								the_result4 = SoundFinder(the_card_link4,the_event4)
+						elif the_card4 == 'Majordomo Executus':
+							if the_event4 == 'play':
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event4 == 'attack':
+								the_result4 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event4 == 'death':
+								the_result4 = SoundFinder(the_card_link4,the_event4)
 					if the_result4 != None:
 						the_reply4 = '''* %s\'s[%s](%s)
 		
@@ -704,7 +848,55 @@ for comment in comments:
 ''' % (the_card4, the_event4, the_result4)
 					print the_reply4
 				if the_card5 != '' and the_event5 != '' and hero_card5 == False:
-					the_result5 = SoundFinder(the_card_link5,the_event5)
+					if the_card5 not in list_of_exceptions:
+						the_result5 = SoundFinder(the_card_link5,the_event5)
+					elif the_card5 in list_of_exceptions:
+						if the_card5 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result5 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result5 = SoundFinder(the_card_link5,the_event5)
+						elif the_card5 == 'Y\'Shaarj, Rage Unbound':
+							if the_event5 == 'play':
+								the_result5 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event5 == 'attack':
+								the_result5 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event5 == 'death':
+								the_result5 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card5 == 'N\'zoth, the Corruptor':
+							if the_event5 == 'play':
+								the_result5 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event5 == 'attack':
+								the_result5 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event5 == 'death':
+								the_result5 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card5 == 'Nefarian':
+							if the_event5 == 'death' or the_event5 == 'attack':
+								the_result5 = SoundFinder(the_card_link5,the_event5)
+							else:
+								the_result5 = '%s%s' % (audio_link_start,the_event5)
+						elif the_card5 == 'Rend Blackhand':
+							if the_event5 == 'play':
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event5 == 'attack':
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event5 == 'death':
+								the_result5 = SoundFinder(the_card_link5,the_event5)
+						elif the_card5 == 'Emperor Thaurissan':
+							if the_event5 == 'play':
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event5 == 'attack':
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event5 == 'death':
+								the_result5 = SoundFinder(the_card_link5,the_event5)
+						elif the_card5 == 'Majordomo Executus':
+							if the_event5 == 'play':
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event5 == 'attack':
+								the_result5 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event5 == 'death':
+								the_result5 = SoundFinder(the_card_link5,the_event5)
 					if the_result5 != None:
 						the_reply5 = '''* %s\'s[%s](%s)
 		
@@ -719,7 +911,55 @@ for comment in comments:
 ''' % (the_card5, the_event5, the_result5)
 					print the_reply5
 				if the_card6 != '' and the_event6 != '' and hero_card6 == False:
-					the_result6 = SoundFinder(the_card_link6,the_event6)
+					if the_card6 not in list_of_exceptions:
+						the_result6 = SoundFinder(the_card_link6,the_event6)
+					elif the_card6 in list_of_exceptions:
+						if the_card6 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result6 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result6 = SoundFinder(the_card_link6,the_event6)
+						elif the_card6 == 'Y\'Shaarj, Rage Unbound':
+							if the_event6 == 'play':
+								the_result6 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event6 == 'attack':
+								the_result6 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event6 == 'death':
+								the_result6 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card6 == 'N\'zoth, the Corruptor':
+							if the_event6 == 'play':
+								the_result6 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event6 == 'attack':
+								the_result6 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event6 == 'death':
+								the_result6 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card6 == 'Nefarian':
+							if the_event6 == 'death' or the_event6 == 'attack':
+								the_result6 = SoundFinder(the_card_link6,the_event6)
+							else:
+								the_result6 = '%s%s' % (audio_link_start,the_event6)
+						elif the_card6 == 'Rend Blackhand':
+							if the_event6 == 'play':
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event6 == 'attack':
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event6 == 'death':
+								the_result6 = SoundFinder(the_card_link6,the_event6)
+						elif the_card6 == 'Emperor Thaurissan':
+							if the_event6 == 'play':
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event6 == 'attack':
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event6 == 'death':
+								the_result6 = SoundFinder(the_card_link6,the_event6)
+						elif the_card6 == 'Majordomo Executus':
+							if the_event6 == 'play':
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event6 == 'attack':
+								the_result6 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event6 == 'death':
+								the_result6 = SoundFinder(the_card_link6,the_event6)
 					if the_result6 != None:
 						the_reply6 = '''* %s\'s[%s](%s)
 		
@@ -734,7 +974,55 @@ for comment in comments:
 ''' % (the_card6, the_event6, the_result6)
 					print the_reply6
 				if the_card7 != '' and the_event7 != '' and hero_card7 == False:
-					the_result7 = SoundFinder(the_card_link7,the_event7)
+					if the_card7 not in list_of_exceptions:
+						the_result7 = SoundFinder(the_card_link7,the_event7)
+					elif the_card7 in list_of_exceptions:
+						if the_card7 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result7 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result7 = SoundFinder(the_card_link7,the_event7)
+						elif the_card7 == 'Y\'Shaarj, Rage Unbound':
+							if the_event7 == 'play':
+								the_result7 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event7 == 'attack':
+								the_result7 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event7 == 'death':
+								the_result7 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card7 == 'N\'zoth, the Corruptor':
+							if the_event7 == 'play':
+								the_result7 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event7 == 'attack':
+								the_result7 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event7 == 'death':
+								the_result7 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card7 == 'Nefarian':
+							if the_event7 == 'death' or the_event7 == 'attack':
+								the_result7 = SoundFinder(the_card_link7,the_event7)
+							else:
+								the_result7 = '%s%s' % (audio_link_start,the_event7)
+						elif the_card7 == 'Rend Blackhand':
+							if the_event7 == 'play':
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event7 == 'attack':
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event7 == 'death':
+								the_result7 = SoundFinder(the_card_link7,the_event7)
+						elif the_card7 == 'Emperor Thaurissan':
+							if the_event7 == 'play':
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event7 == 'attack':
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event7 == 'death':
+								the_result7 = SoundFinder(the_card_link7,the_event7)
+						elif the_card7 == 'Majordomo Executus':
+							if the_event7 == 'play':
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event7 == 'attack':
+								the_result7 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event7 == 'death':
+								the_result7 = SoundFinder(the_card_link7,the_event7)
 					if the_result7 != None:
 						the_reply7 = '''* %s\'s[%s](%s)
 		
@@ -749,7 +1037,55 @@ for comment in comments:
 ''' % (the_card7, the_event7, the_result7)
 					print the_reply7
 				if the_card8 != '' and the_event8 != '' and hero_card8 == False:
-					the_result8 = SoundFinder(the_card_link8,the_event8)
+					if the_card8 not in list_of_exceptions:
+						the_result8 = SoundFinder(the_card_link8,the_event8)
+					elif the_card8 in list_of_exceptions:
+						if the_card8 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result8 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result8 = SoundFinder(the_card_link8,the_event8)
+						elif the_card8 == 'Y\'Shaarj, Rage Unbound':
+							if the_event8 == 'play':
+								the_result8 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event8 == 'attack':
+								the_result8 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event8 == 'death':
+								the_result8 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card8 == 'N\'zoth, the Corruptor':
+							if the_event8 == 'play':
+								the_result8 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event8 == 'attack':
+								the_result8 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event8 == 'death':
+								the_result8 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card8 == 'Nefarian':
+							if the_event8 == 'death' or the_event8 == 'attack':
+								the_result8 = SoundFinder(the_card_link8,the_event8)
+							else:
+								the_result8 = '%s%s' % (audio_link_start,the_event8)
+						elif the_card8 == 'Rend Blackhand':
+							if the_event8 == 'play':
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event8 == 'attack':
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event8 == 'death':
+								the_result8 = SoundFinder(the_card_link8,the_event8)
+						elif the_card8 == 'Emperor Thaurissan':
+							if the_event8 == 'play':
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event8 == 'attack':
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event8 == 'death':
+								the_result8 = SoundFinder(the_card_link8,the_event8)
+						elif the_card8 == 'Majordomo Executus':
+							if the_event8 == 'play':
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event8 == 'attack':
+								the_result8 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event8 == 'death':
+								the_result8 = SoundFinder(the_card_link8,the_event8)
 					if the_result8 != None:
 						the_reply8 = '''* %s\'s[%s](%s)
 		
@@ -764,7 +1100,55 @@ for comment in comments:
 ''' % (the_card8, the_event8, the_result8)
 					print the_reply8
 				if the_card9 != '' and the_event9 != '' and hero_card9 == False:
-					the_result9 = SoundFinder(the_card_link9,the_event9)
+					if the_card9 not in list_of_exceptions:
+						the_result9 = SoundFinder(the_card_link9,the_event9)
+					elif the_card9 in list_of_exceptions:
+						if the_card9 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result9 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result9 = SoundFinder(the_card_link9,the_event9)
+						elif the_card9 == 'Y\'Shaarj, Rage Unbound':
+							if the_event9 == 'play':
+								the_result9 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event9 == 'attack':
+								the_result9 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event9 == 'death':
+								the_result9 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card9 == 'N\'zoth, the Corruptor':
+							if the_event9 == 'play':
+								the_result9 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event9 == 'attack':
+								the_result9 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event9 == 'death':
+								the_result9 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card9 == 'Nefarian':
+							if the_event9 == 'death' or the_event9 == 'attack':
+								the_result9 = SoundFinder(the_card_link9,the_event9)
+							else:
+								the_result9 = '%s%s' % (audio_link_start,the_event9)
+						elif the_card9 == 'Rend Blackhand':
+							if the_event9 == 'play':
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event9 == 'attack':
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event9 == 'death':
+								the_result9 = SoundFinder(the_card_link9,the_event9)
+						elif the_card9 == 'Emperor Thaurissan':
+							if the_event9 == 'play':
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event9 == 'attack':
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event9 == 'death':
+								the_result9 = SoundFinder(the_card_link9,the_event9)
+						elif the_card9 == 'Majordomo Executus':
+							if the_event9 == 'play':
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event9 == 'attack':
+								the_result9 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event9 == 'death':
+								the_result9 = SoundFinder(the_card_link9,the_event9)
 					if the_result9 != None:
 						the_reply9 = '''* %s\'s[%s](%s)
 		
@@ -779,7 +1163,55 @@ for comment in comments:
 ''' % (the_card9, the_event9, the_result9)
 					print the_reply9
 				if the_card10 != '' and the_event10 != '' and hero_card10 == False:
-					the_result10 = SoundFinder(the_card_link10,the_event10)
+					if the_card10 not in list_of_exceptions:
+						the_result10 = SoundFinder(the_card_link10,the_event10)
+					elif the_card10 in list_of_exceptions:
+						if the_card10 == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint(0,11)
+								the_result10 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result10 = SoundFinder(the_card_link10,the_event10)
+						elif the_card10 == 'Y\'Shaarj, Rage Unbound':
+							if the_event10 == 'play':
+								the_result10 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event10 == 'attack':
+								the_result10 = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event10 == 'death':
+								the_result10 = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card10 == 'N\'zoth, the Corruptor':
+							if the_event10 == 'play':
+								the_result10 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
+							if the_event10 == 'attack':
+								the_result10 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
+							if the_event10 == 'death':
+								the_result10 = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
+						elif the_card10 == 'Nefarian':
+							if the_event10 == 'death' or the_event10 == 'attack':
+								the_result10 = SoundFinder(the_card_link10,the_event10)
+							else:
+								the_result10 = '%s%s' % (audio_link_start,the_event10)
+						elif the_card10 == 'Rend Blackhand':
+							if the_event10 == 'play':
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
+							if the_event10 == 'attack':
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
+							if the_event10 == 'death':
+								the_result10 = SoundFinder(the_card_link10,the_event10)
+						elif the_card10 == 'Emperor Thaurissan':
+							if the_event10 == 'play':
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
+							if the_event10 == 'attack':
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
+							if the_event10 == 'death':
+								the_result10 = SoundFinder(the_card_link10,the_event10)
+						elif the_card10 == 'Majordomo Executus':
+							if the_event10 == 'play':
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event10 == 'attack':
+								the_result10 = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
+							if the_event10 == 'death':
+								the_result10 = SoundFinder(the_card_link10,the_event10)
 					if the_result10 != None:
 						the_reply10 = '''* %s\'s[%s](%s)
 		
