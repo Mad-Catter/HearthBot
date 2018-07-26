@@ -668,6 +668,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
+								print i
 								if the_event == 'trigger%s' % (i):
 									the_result = '%s%s' % (audio_link_start,the_event)
 								else:
