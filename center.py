@@ -667,6 +667,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event == 'trigger%s' % (i):
+									the_result = '%s%s' % (audio_link_start,the_event)
 							else:
 								the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Y\'Shaarj, Rage Unbound':
@@ -730,6 +733,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result2 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event2 == 'trigger%s' % (i):
+									the_result2 = '%s%s' % (audio_link_start,the_event2)
 							else:
 								the_result2 = SoundFinder(the_card_link2,the_event2)
 						elif the_card2 == 'Y\'Shaarj, Rage Unbound':
@@ -793,6 +799,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result3 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event3 == 'trigger%s' % (i):
+									the_result3 = '%s%s' % (audio_link_start,the_event3)
 							else:
 								the_result3 = SoundFinder(the_card_link3,the_event3)
 						elif the_card3 == 'Y\'Shaarj, Rage Unbound':
@@ -856,6 +865,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result4 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event4 == 'trigger%s' % (i):
+									the_result4 = '%s%s' % (audio_link_start,the_event4)
 							else:
 								the_result4 = SoundFinder(the_card_link4,the_event4)
 						elif the_card4 == 'Y\'Shaarj, Rage Unbound':
@@ -919,6 +931,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result5 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event5 == 'trigger%s' % (i):
+									the_result5 = '%s%s' % (audio_link_start,the_event5)
 							else:
 								the_result5 = SoundFinder(the_card_link5,the_event5)
 						elif the_card5 == 'Y\'Shaarj, Rage Unbound':
@@ -982,6 +997,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result6 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event6 == 'trigger%s' % (i):
+									the_result6 = '%s%s' % (audio_link_start,the_event6)
 							else:
 								the_result6 = SoundFinder(the_card_link6,the_event6)
 						elif the_card6 == 'Y\'Shaarj, Rage Unbound':
@@ -1045,6 +1063,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result7 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event7 == 'trigger%s' % (i):
+									the_result7 = '%s%s' % (audio_link_start,the_event7)
 							else:
 								the_result7 = SoundFinder(the_card_link7,the_event7)
 						elif the_card7 == 'Y\'Shaarj, Rage Unbound':
@@ -1108,6 +1129,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result8 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event8 == 'trigger%s' % (i):
+									the_result8 = '%s%s' % (audio_link_start,the_event8)
 							else:
 								the_result8 = SoundFinder(the_card_link8,the_event8)
 						elif the_card8 == 'Y\'Shaarj, Rage Unbound':
@@ -1171,6 +1195,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result9 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event9 == 'trigger%s' % (i):
+									the_result9 = '%s%s' % (audio_link_start,the_event9)
 							else:
 								the_result9 = SoundFinder(the_card_link9,the_event9)
 						elif the_card9 == 'Y\'Shaarj, Rage Unbound':
@@ -1234,6 +1261,9 @@ for comment in comments:
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
 								the_result10 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
+							for i in range(0,11):
+								if the_event10 == 'trigger%s' % (i):
+									the_result10 = '%s%s' % (audio_link_start,the_event10)
 							else:
 								the_result10 = SoundFinder(the_card_link10,the_event10)
 						elif the_card10 == 'Y\'Shaarj, Rage Unbound':
@@ -1289,7 +1319,9 @@ for comment in comments:
 		
 ''' % (the_card10, the_event10, the_result10)
 					print the_reply10
-		
+				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
+				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
+				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
 				if text == 'good-bot':
 					if comment.parent().author.name == os.environ.get('reddit_username'):
 						dice_roll = randint(1,4)
@@ -1320,9 +1352,6 @@ for comment in comments:
 				if the_reply != '':
 					true_reply = '%s%s%s%s%s%s%s%s%s%s' % (the_reply,the_reply2,the_reply3,the_reply4,the_reply5,the_reply6,the_reply7,the_reply8,the_reply9,the_reply10)
 					comment.reply(true_reply)
-				#These two if statments will reply a random precreated message to the common "good bot" and "bad bot" replies.  The if statment checks if a reply is one of the famous responses.
-				#Then it will check the parent comment's author to check if the reply is aimed at the hearthsound_bot.
-				#Then if it is, the bot will get a random number from randint and then choose a funny response to reply based off of the random number it gets.
 				
 		
 				#Here, all of the variables that could've been used are reset to blank as to avoid previous replies messing up future ones.
