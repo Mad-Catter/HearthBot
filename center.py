@@ -240,7 +240,6 @@ for comment in comments:
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
 								the_card_link2 = '%s%s' % (card_link_start,card)
-								print the_card_link2
 						elif the_card3 == '':
 							if card not in dic_of_grammar:
 								the_card3 = capwords(card.replace('-',' '))
@@ -473,6 +472,7 @@ for comment in comments:
 						if the_event == '':
 							the_event = line
 							event_caller = EventFinder(the_event)
+							print the_event
 						elif the_event2 == '':
 							the_event2 = line
 							event_caller2 = EventFinder(the_event2)
