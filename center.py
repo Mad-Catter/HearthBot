@@ -79,8 +79,12 @@ minion_list = ['molten-giant', 'arcane-giant', 'clockwork-giant', 'mountain-gian
 dic_of_nicknames = {'4-mana-7/7': 'flamewreathed-faceless', 'dr.-7': 'dr.-boom', 'rag': 'ragnaros-the-firelord', 'happy-rag': 'ragnaros-lightlord', 'flappy-bird': 'vicious-fledgling',
 'a-turtle': 'malganis', 'turtle': 'malganis', 'yogg': 'yogg-saron-hopes-end', 'frog-saron': 'yogg-saron-hopes-end', 'frog-saron-hopes-end': 'yogg-saron-hopes-end'}
 
+cthun_triggers = ['/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_02.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_03.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_01.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_06.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_07.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_04.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_05.ogg',  '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_08.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_09.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_10.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_11.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_12.ogg', ]
+nefarian_plays = {'warlock': '/hs/sounds/enus/VO_BRMA13_1_HP_WARLOCK_10.ogg', 'priest': 'hs/sounds/enus/VO_BRMA13_1_HP_PRIEST_08.ogg', 'warrior': '/hs/sounds/enus/VO_BRMA13_1_HP_WARRIOR_09.ogg', 'druid': '/hs/sounds/enus/VO_BRMA13_1_HP_DRUID_14.ogg', 'mage': '/hs/sounds/enus/VO_BRMA13_1_HP_MAGE_11.ogg', 'rogue': '/hs/sounds/enus/VO_BRMA13_1_HP_ROGUE_15.ogg', 'paladin': 'hs/soundds/enus/VO_BRMA13_1_HP_PALADIN_07.ogg', 'shaman': '/hs/sounds/enus/VO_BRMA13_1_HP_SHAMAN_13.ogg'}
+
+list_of_exceptions = ['C\'thun', 'Y\'Shaarj, Rage Unbound', 'Nefarian', 'N\'zoth, the Corruptor', 'Rend Blackhand', 'Emperor Thaurissan', 'Majordomo Executus']
 #The link to almost any minion in hearthhead is always http://www.hearthhead.com/cards/ followed by the minion's name (without any punctuation or capitalization and with all spaces replaced with -)
-cardlinkstart = "http://www.hearthhead.com/cards/"
+card_link_start = "http://www.hearthhead.com/cards/"
 #The event list is a list of the terms people can use to call the bot and decide the type of line they want.
 event_list = ['attack','play','death','trigger']
 #These are empty variables that will be used later.
@@ -203,10 +207,10 @@ for comment in comments:
 							#This is where the link to hearthhead for any indivdual card is made.  If the card is in dic_of_multiples the link gets a number and a dash added to it.
 							#In our example the_card_link would be "http://www.hearthhead.com/cards/druid-of-the-claw". Dic cards would be something like http://www.hearthhead.com/cards/kelthuzad-1
 							if card not in dic_of_multiples:
-								the_card_link = '%s%s' % (cardlinkstart,card)
+								the_card_link = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link = '%s%s' % (cardlinkstart,card)
+								the_card_link = '%s%s' % (card_link_start,card)
 						#Everything gets repeated upto 9 more times for any other cards written in the comment.
 						elif the_card2 == '':
 							if card not in dic_of_grammar:
@@ -228,10 +232,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card2 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link2 = '%s%s' % (cardlinkstart,card)
+								the_card_link2 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link2 = '%s%s' % (cardlinkstart,card)
+								the_card_link2 = '%s%s' % (card_link_start,card)
 						elif the_card3 == '':
 							if card not in dic_of_grammar:
 								the_card3 = capwords(card.replace('-',' '))
@@ -252,10 +256,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card3 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link3 = '%s%s' % (cardlinkstart,card)
+								the_card_link3 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link3 = '%s%s' % (cardlinkstart,card)
+								the_card_link3 = '%s%s' % (card_link_start,card)
 						elif the_card4 == '':
 							if card not in dic_of_grammar:
 								the_card4 = capwords(card.replace('-',' '))
@@ -276,10 +280,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card4 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link4 = '%s%s' % (cardlinkstart,card)
+								the_card_link4 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link4 = '%s%s' % (cardlinkstart,card)
+								the_card_link4 = '%s%s' % (card_link_start,card)
 						elif the_card5 == '':
 							if card not in dic_of_grammar:
 								the_card5 = capwords(card.replace('-',' '))
@@ -300,10 +304,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card5 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link5 = '%s%s' % (cardlinkstart,card)
+								the_card_link5 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link5 = '%s%s' % (cardlinkstart,card)
+								the_card_link5 = '%s%s' % (card_link_start,card)
 						elif the_card6 == '':
 							if card not in dic_of_grammar:
 								the_card6 =capwords(card.replace('-',' '))
@@ -324,10 +328,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card6 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link6 = '%s%s' % (cardlinkstart,card)
+								the_card_link6 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link6 = '%s%s' % (cardlinkstart,card)
+								the_card_link6 = '%s%s' % (card_link_start,card)
 						elif the_card7 == '':
 							if card not in dic_of_grammar:
 								the_card7 = capwords(card.replace('-',' '))
@@ -348,10 +352,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card7 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link7 = '%s%s' % (cardlinkstart,card)
+								the_card_link7 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link7 = '%s%s' % (cardlinkstart,card)
+								the_card_link7 = '%s%s' % (card_link_start,card)
 						elif the_card8 == '':
 							if card not in dic_of_grammar:
 								the_card8 = capwords(card.replace('-',' '))
@@ -372,10 +376,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card8 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link8 = '%s%s' % (cardlinkstart,card)
+								the_card_link8 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link8 = '%s%s' % (cardlinkstart,card)
+								the_card_link8 = '%s%s' % (card_link_start,card)
 						elif the_card9 == '':
 							if card not in dic_of_grammar:
 								the_card9 = capwords(card.replace('-',' '))
@@ -396,10 +400,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card9 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link9 = '%s%s' % (cardlinkstart,card)
+								the_card_link9 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link9 = '%s%s' % (cardlinkstart,card)
+								the_card_link9 = '%s%s' % (card_link_start,card)
 						elif the_card10 == '':
 							if card not in dic_of_grammar:
 								the_card10 = capwords(card.replace('-',' '))
@@ -420,10 +424,10 @@ for comment in comments:
 							if card in dic_of_grammar:
 								the_card10 = dic_of_grammar.get(card)
 							if card not in dic_of_multiples:
-								the_card_link10 = '%s%s' % (cardlinkstart,card)
+								the_card_link10 = '%s%s' % (card_link_start,card)
 							elif card in dic_of_multiples:
 								card = dic_of_multiples.get(card)
-								the_card_link10 = '%s%s' % (cardlinkstart,card)
+								the_card_link10 = '%s%s' % (card_link_start,card)
 					if card not in minion_list:
 						for hero in list_of_hero_names:
 							if card == hero:
@@ -552,13 +556,95 @@ for comment in comments:
 								if line == entry:
 										the_event10 = entry.replace('-', ' ')
 										the_result10 = list_of_heroes[entry_pos].get(entry)
+						for hero in nefarian_plays.keys():
+							if 'play-%s' % (hero) == line:
+								if the_event == '':
+									the_event = nefarian_plays.get(line)
+									event_caller = EventFinder('play')
+								elif the_event2 == '':
+									the_event2 = nefarian_plays.get(line)
+									event_caller2 = EventFinder('play')
+								elif the_event3 == '':
+									the_event3 = nefarian_plays.get(line)
+									event_caller3 = EventFinder('play')
+								elif the_event4 == '':
+									the_event4 = nefarian_plays.get(line)
+									event_caller4 = EventFinder('play')
+								elif the_event5 == '':
+									the_event5 = nefarian_plays.get(line)
+									event_caller5 = EventFinder('play')
+								elif the_event6 == '':
+									the_event6 = nefarian_plays.get(line) 
+									event_caller6 = EventFinder('play')
+								elif the_event7 == '':
+									the_event7 = nefarian_plays.get(line)
+									event_caller7 = EventFinder('play')
+								elif the_event8 == '':
+									the_event8 = nefarian_plays.get(line) 
+									event_caller8 = EventFinder('play')
+								elif the_event9 == '':
+									the_event9 = nefarian_plays.get(line) 
+									event_caller9 = EventFinder('play')
+								elif the_event10 == '':
+									the_event10 = nefarian_plays.get(line) 
+									event_caller10 = EventFinder('play')
 
 				#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
 				#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
 				#It is formatted into []() which is Reddit's way of having hyperlinks in comments.
 				#In our example the_result would be "http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_EX1_165_Play_01.ogg" and then "Druid of the Claw's [play line.](the_result)" 
 				if the_card != '' and the_event != '' and hero_card == False:
-					the_result = SoundFinder(the_card_link,the_event)
+					if the_card not in list_of_exceptions:
+						the_result = SoundFinder(the_card_link,the_event)
+					elif the_card in list_of_exceptions:
+						if the_card == 'C\'thun':
+							if the_event == 'trigger':
+								dice_roll = randint[0,11]
+								the_result = '%s%s' (card_link_start, cthun_triggers[dice_roll])
+							else:
+								the_result = SoundFinder(the_card_link,the_event)
+						elif the_card == 'Y\'Shaarj, Rage Unbound':
+							if the_event == 'play':
+								the_result = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (card_link_start)
+							if the_event == 'attack':
+								the_result = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (card_link_start)
+							if the_event == 'death':
+								the_result = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (card_link_start)
+						elif the_card == 'N\'zoth, the Corruptor':
+							if the_event == 'play':
+								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (card_link_start)
+							if the_event == 'attack':
+								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (card_link_start)
+							if the_event == 'death':
+								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (card_link_start)
+						elif the_card == 'Nefarian':
+							if the_event == 'death' or the_event == 'attack':
+								the_result = SoundFinder(the_card_link,the_event)
+							else:
+								the_result = '%s%s' % (card_link_start,the_event)
+						elif the_card == 'Rend Blackhand':
+							if the_event == 'play':
+								the_result = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (card_link_start)
+							if the_event == 'attack':
+								the_result = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (card_link_start)
+							if the_event == 'death':
+								the_result = SoundFinder(the_card_link,the_event)
+						elif the_card == 'Emperor Thaurissan':
+							if the_event == 'play':
+								the_result = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (card_link_start)
+							if the_event == 'attack':
+								the_result = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (card_link_start)
+							if the_event == 'death':
+								the_result = SoundFinder(the_card_link,the_event)
+						elif the_card == 'Majordomo Executus':
+							if the_event == 'play':
+								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (card_link_start)
+							if the_event == 'attack':
+								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (card_link_start)
+							if the_event == 'death':
+								the_result = SoundFinder(the_card_link,the_event)
+
+
 					if the_result != None:
 						the_reply = '''* %s\'s[%s](%s)
 		
