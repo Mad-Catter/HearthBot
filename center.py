@@ -599,7 +599,7 @@ for comment in comments:
 					elif the_card in list_of_exceptions:
 						if the_card == 'C\'thun':
 							if the_event == 'trigger':
-								dice_roll = randint[0,11]
+								dice_roll = randint(0,11)
 								the_result = '%s%s' (card_link_start, cthun_triggers[dice_roll])
 							else:
 								the_result = SoundFinder(the_card_link,the_event)
