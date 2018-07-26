@@ -472,11 +472,9 @@ for comment in comments:
 						if the_event == '':
 							the_event = line
 							event_caller = EventFinder(the_event)
-							print 'hey im the event %s' % (the_event)
 						elif the_event2 == '':
 							the_event2 = line
 							event_caller2 = EventFinder(the_event2)
-							print 'the event is %s' % (the_event2)
 						elif the_event3 == '':
 							the_event3 = line 
 							event_caller3 = EventFinder(the_event3)
@@ -599,31 +597,31 @@ for comment in comments:
 								if the_event == '':
 									the_event = cthun_triggers[i]
 									event_caller = EventFinder('trigger')
-								if the_event2 == '':
+								elif the_event2 == '':
 									the_event2 = cthun_triggers[i]
 									event_caller2 = EventFinder('trigger') 
-								if the_event3 == '':
+								elif the_event3 == '':
 									the_event3 = cthun_triggers[i]
 									event_caller3 = EventFinder('trigger') 
-								if the_event4 == '':
+								elif the_event4 == '':
 									the_event4 = cthun_triggers[i]
 									event_caller4 = EventFinder('trigger') 
-								if the_event5 == '':
+								elif the_event5 == '':
 									the_event5 = cthun_triggers[i]
 									event_caller5 = EventFinder('trigger') 
-								if the_event6 == '':
+								elif the_event6 == '':
 									the_event6 = cthun_triggers[i]
 									event_caller6 = EventFinder('trigger') 
-								if the_event7 == '':
+								elif the_event7 == '':
 									the_event7 = cthun_triggers[i]
 									event_caller7 = EventFinder('trigger') 
-								if the_event8 == '':
+								elif the_event8 == '':
 									the_event8 = cthun_triggers[i]
 									event_caller8 = EventFinder('trigger') 
-								if the_event9 == '':
+								elif the_event9 == '':
 									the_event9 = cthun_triggers[i]
 									event_caller9 = EventFinder('trigger') 
-								if the_event9 == '':
+								elif the_event10 == '':
 									the_event10 = cthun_triggers[i]
 									event_caller10 = EventFinder('trigger')
 						if line == 'play-2':
