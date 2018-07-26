@@ -596,7 +596,6 @@ for comment in comments:
 							if line == 'trigger%s' % (i):
 								if the_event == '':
 									the_event = cthun_triggers[i]
-									print the_event
 									event_caller = EventFinder('trigger')
 								elif the_event2 == '':
 									the_event2 = cthun_triggers[i]
@@ -669,9 +668,8 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event == 'trigger%s' % (i):
+								if the_event == cthun_triggers[i]:
 									the_result = '%s%s' % (audio_link_start,the_event)
-									print the_result
 								elif i == 11:
 									the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Y\'Shaarj, Rage Unbound':
@@ -736,7 +734,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result2 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event2 == 'trigger%s' % (i):
+								if the_event2 == cthun_triggers[i]:
 									the_result2 = '%s%s' % (audio_link_start,the_event2)
 								elif i == 11:
 									the_result2 = SoundFinder(the_card_link2,the_event2)
@@ -802,7 +800,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result3 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event3 == 'trigger%s' % (i):
+								if the_event3 == cthun_triggers[i]:
 									the_result3 = '%s%s' % (audio_link_start,the_event3)
 								elif i == 11:
 									the_result3 = SoundFinder(the_card_link3,the_event3)
@@ -868,7 +866,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result4 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event4 == 'trigger%s' % (i):
+								if the_event4 == cthun_triggers[i]:
 									the_result4 = '%s%s' % (audio_link_start,the_event4)
 								elif i == 11:
 									the_result4 = SoundFinder(the_card_link4,the_event4)
@@ -934,7 +932,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result5 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event5 == 'trigger%s' % (i):
+								if the_event5 == cthun_triggers[i]:
 									the_result5 = '%s%s' % (audio_link_start,the_event5)
 								elif i == 11:
 									the_result5 = SoundFinder(the_card_link5,the_event5)
@@ -1000,7 +998,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result6 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event6 == 'trigger%s' % (i):
+								if the_event6 == cthun_triggers[i]:
 									the_result6 = '%s%s' % (audio_link_start,the_event6)
 								elif i == 11:
 									the_result6 = SoundFinder(the_card_link6,the_event6)
@@ -1066,7 +1064,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result7 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event7 == 'trigger%s' % (i):
+								if the_event7 == cthun_triggers[i]:
 									the_result7 = '%s%s' % (audio_link_start,the_event7)
 								elif i == 11:
 									the_result7 = SoundFinder(the_card_link7,the_event7)
@@ -1132,7 +1130,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result8 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event8 == 'trigger%s' % (i):
+								if the_event8 == cthun_triggers[i]:
 									the_result8 = '%s%s' % (audio_link_start,the_event8)
 								elif i == 11:
 									the_result8 = SoundFinder(the_card_link8,the_event8)
@@ -1198,7 +1196,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result9 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event9 == 'trigger%s' % (i):
+								if the_event9 == cthun_triggers[i]:
 									the_result9 = '%s%s' % (audio_link_start,the_event9)
 								elif i == 11:
 									the_result9 = SoundFinder(the_card_link9,the_event9)
@@ -1264,7 +1262,7 @@ for comment in comments:
 								dice_roll = randint(0,11)
 								the_result10 = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							for i in range(0,11):
-								if the_event10 == 'trigger%s' % (i):
+								if the_event10 == cthun_triggers[i]:
 									the_result10 = '%s%s' % (audio_link_start,the_event10)
 								elif i == 11:
 									the_result10 = SoundFinder(the_card_link10,the_event10)
