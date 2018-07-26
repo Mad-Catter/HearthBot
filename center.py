@@ -671,6 +671,7 @@ for comment in comments:
 							for i in range(0,11):
 								if the_event == 'trigger%s' % (i):
 									the_result = '%s%s' % (audio_link_start,the_event)
+									print the_result
 								elif i == 11:
 									the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Y\'Shaarj, Rage Unbound':
@@ -714,7 +715,7 @@ for comment in comments:
 							if the_event == 'death':
 								the_result = SoundFinder(the_card_link,the_event)
 					if the_result != None:
-						the_reply = '''* %s\'s[%s](%s)
+						the_reply = '''* %s\'s[%s](%s)	
 		
 		
 ''' % (the_card, event_caller, the_result)
