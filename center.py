@@ -77,7 +77,8 @@ minion_list = ['molten-giant', 'arcane-giant', 'clockwork-giant', 'mountain-gian
 
 
 dic_of_nicknames = {'4-mana-7/7': 'flamewreathed-faceless', 'dr.-7': 'dr.-boom', 'rag': 'ragnaros-the-firelord', 'happy-rag': 'ragnaros-lightlord', 'flappy-bird': 'vicious-fledgling',
-'a-turtle': 'malganis', 'turtle': 'malganis', 'yogg': 'yogg-saron-hopes-end', 'frog-saron': 'yogg-saron-hopes-end', 'frog-saron-hopes-end': 'yogg-saron-hopes-end'}
+'a-turtle': 'malganis', 'turtle': 'malganis', 'yogg': 'yogg-saron-hopes-end', 'frog-saron': 'yogg-saron-hopes-end', 'frog-saron-hopes-end': 'yogg-saron-hopes-end', 'nzoth': 'nzoth-the-corruptor',
+'yshaarj': 'yshaarj-rage-unbound'}
 
 cthun_triggers = ['/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_02.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_03.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_01.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_06.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_07.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_04.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_05.ogg',  '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_08.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_09.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_10.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_11.ogg', '/hs/sounds/enus/VO_OG_280_Male_OldGod_InPlay_12.ogg', ]
 nefarian_plays = {'warlock': '/hs/sounds/enus/VO_BRMA13_1_HP_WARLOCK_10.ogg', 'priest': 'hs/sounds/enus/VO_BRMA13_1_HP_PRIEST_08.ogg', 'warrior': '/hs/sounds/enus/VO_BRMA13_1_HP_WARRIOR_09.ogg', 'druid': '/hs/sounds/enus/VO_BRMA13_1_HP_DRUID_14.ogg', 'mage': '/hs/sounds/enus/VO_BRMA13_1_HP_MAGE_11.ogg', 'rogue': '/hs/sounds/enus/VO_BRMA13_1_HP_ROGUE_15.ogg', 'paladin': 'hs/soundds/enus/VO_BRMA13_1_HP_PALADIN_07.ogg', 'shaman': '/hs/sounds/enus/VO_BRMA13_1_HP_SHAMAN_13.ogg'}
@@ -560,34 +561,34 @@ for comment in comments:
 						for hero in nefarian_plays.keys():
 							if 'play-%s' % (hero) == line:
 								if the_event == '':
-									the_event = nefarian_plays.get(line)
+									the_event = nefarian_plays.get(hero)
 									event_caller = EventFinder('play')
 								elif the_event2 == '':
-									the_event2 = nefarian_plays.get(line)
+									the_event2 = nefarian_plays.get(hero)
 									event_caller2 = EventFinder('play')
 								elif the_event3 == '':
-									the_event3 = nefarian_plays.get(line)
+									the_event3 = nefarian_plays.get(hero)
 									event_caller3 = EventFinder('play')
 								elif the_event4 == '':
-									the_event4 = nefarian_plays.get(line)
+									the_event4 = nefarian_plays.get(hero)
 									event_caller4 = EventFinder('play')
 								elif the_event5 == '':
-									the_event5 = nefarian_plays.get(line)
+									the_event5 = nefarian_plays.get(hero)
 									event_caller5 = EventFinder('play')
 								elif the_event6 == '':
-									the_event6 = nefarian_plays.get(line) 
+									the_event6 = nefarian_plays.get(hero) 
 									event_caller6 = EventFinder('play')
 								elif the_event7 == '':
-									the_event7 = nefarian_plays.get(line)
+									the_event7 = nefarian_plays.get(hero)
 									event_caller7 = EventFinder('play')
 								elif the_event8 == '':
-									the_event8 = nefarian_plays.get(line) 
+									the_event8 = nefarian_plays.get(hero) 
 									event_caller8 = EventFinder('play')
 								elif the_event9 == '':
-									the_event9 = nefarian_plays.get(line) 
+									the_event9 = nefarian_plays.get(hero) 
 									event_caller9 = EventFinder('play')
 								elif the_event10 == '':
-									the_event10 = nefarian_plays.get(line) 
+									the_event10 = nefarian_plays.get(hero) 
 									event_caller10 = EventFinder('play')
 
 				#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
@@ -644,8 +645,6 @@ for comment in comments:
 								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event == 'death':
 								the_result = SoundFinder(the_card_link,the_event)
-
-
 					if the_result != None:
 						the_reply = '''* %s\'s[%s](%s)
 		
