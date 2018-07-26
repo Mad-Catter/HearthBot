@@ -85,6 +85,7 @@ nefarian_plays = {'warlock': '/hs/sounds/enus/VO_BRMA13_1_HP_WARLOCK_10.ogg', 'p
 list_of_exceptions = ['C\'thun', 'Y\'Shaarj, Rage Unbound', 'Nefarian', 'N\'zoth, the Corruptor', 'Rend Blackhand', 'Emperor Thaurissan', 'Majordomo Executus']
 #The link to almost any minion in hearthhead is always http://www.hearthhead.com/cards/ followed by the minion's name (without any punctuation or capitalization and with all spaces replaced with -)
 card_link_start = "http://www.hearthhead.com/cards/"
+audio_link_start = 'http://media.services.zam.com/v1/media/byName/'
 #The event list is a list of the terms people can use to call the bot and decide the type of line they want.
 event_list = ['attack','play','death','trigger']
 #These are empty variables that will be used later.
@@ -600,47 +601,47 @@ for comment in comments:
 						if the_card == 'C\'thun':
 							if the_event == 'trigger':
 								dice_roll = randint(0,11)
-								the_result = '%s%s' % (card_link_start, cthun_triggers[dice_roll])
+								the_result = '%s%s' % (audio_link_start, cthun_triggers[dice_roll])
 							else:
 								the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Y\'Shaarj, Rage Unbound':
 							if the_event == 'play':
-								the_result = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Play_01.ogg' % (audio_link_start)
 							if the_event == 'attack':
-								the_result = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (card_link_start)
+								the_result = '%shs/sounds/enus/VO_OG_133_Male_OldGod_Attack_01.ogg' % (audio_link_start)
 							if the_event == 'death':
-								the_result = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_OG_133_Male_OldGod_Death_01.ogg' % (audio_link_start)
 						elif the_card == 'N\'zoth, the Corruptor':
 							if the_event == 'play':
-								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Play_01.ogg' % (audio_link_start)
 							if the_event == 'attack':
-								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Attack_01.ogg' % (audio_link_start)
 							if the_event == 'death':
-								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_OG_042_Male_OldGod_Death_01.ogg' % (audio_link_start)
 						elif the_card == 'Nefarian':
 							if the_event == 'death' or the_event == 'attack':
 								the_result = SoundFinder(the_card_link,the_event)
 							else:
-								the_result = '%s%s' % (card_link_start,the_event)
+								the_result = '%s%s' % (audio_link_start,the_event)
 						elif the_card == 'Rend Blackhand':
 							if the_event == 'play':
-								the_result = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_BRMA09_1_START_01.ogg' % (audio_link_start)
 							if the_event == 'attack':
-								the_result = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_BRMA09_1_RESPONSE_04.ogg' % (audio_link_start)
 							if the_event == 'death':
 								the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Emperor Thaurissan':
 							if the_event == 'play':
-								the_result = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_BRMA03_1_CARD_04.ogg' % (audio_link_start)
 							if the_event == 'attack':
-								the_result = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_BRMA03_1_HERO_POWER_06.ogg' % (audio_link_start)
 							if the_event == 'death':
 								the_result = SoundFinder(the_card_link,the_event)
 						elif the_card == 'Majordomo Executus':
 							if the_event == 'play':
-								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event == 'attack':
-								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (card_link_start)
+								the_result = '%s/hs/sounds/enus/VO_BRMA06_1_TURN1_02_ALT.ogg' % (audio_link_start)
 							if the_event == 'death':
 								the_result = SoundFinder(the_card_link,the_event)
 
