@@ -472,7 +472,7 @@ for comment in comments:
 						if the_event == '':
 							the_event = line
 							event_caller = EventFinder(the_event)
-							print the_event
+							print 'hey im the event %s' % (the_event)
 						elif the_event2 == '':
 							the_event2 = line
 							event_caller2 = EventFinder(the_event2)
