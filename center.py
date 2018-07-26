@@ -596,6 +596,7 @@ for comment in comments:
 							if line == 'trigger%s' % (i):
 								if the_event == '':
 									the_event = cthun_triggers[i]
+									print the_event
 									event_caller = EventFinder('trigger')
 								elif the_event2 == '':
 									the_event2 = cthun_triggers[i]
