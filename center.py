@@ -566,34 +566,34 @@ for comment in comments:
 							if 'play-%s' % (hero) == line:
 								if the_event == '':
 									the_event = nefarian_plays.get(hero)
-									event_caller = 's play line against %s.' % (hero)
+									event_caller = ' play line against %s.' % (hero)
 								elif the_event2 == '':
 									the_event2 = nefarian_plays.get(hero)
-									event_caller2 = 's play line against %s.' % (hero)
+									event_caller2 = ' play line against %s.' % (hero)
 								elif the_event3 == '':
 									the_event3 = nefarian_plays.get(hero)
-									event_caller3 = 's play line against %s.' % (hero)
+									event_caller3 = ' play line against %s.' % (hero)
 								elif the_event4 == '':
 									the_event4 = nefarian_plays.get(hero)
-									event_caller4 = 's play line against %s.' % (hero)
+									event_caller4 = ' play line against %s.' % (hero)
 								elif the_event5 == '':
 									the_event5 = nefarian_plays.get(hero)
-									event_caller5 = 's play line against %s.' % (hero)
+									event_caller5 = ' play line against %s.' % (hero)
 								elif the_event6 == '':
 									the_event6 = nefarian_plays.get(hero) 
-									event_caller6 = 's play line against %s.' % (hero)
+									event_caller6 = ' play line against %s.' % (hero)
 								elif the_event7 == '':
 									the_event7 = nefarian_plays.get(hero)
-									event_caller7 = 's play line against %s.' % (hero)
+									event_caller7 = ' play line against %s.' % (hero)
 								elif the_event8 == '':
 									the_event8 = nefarian_plays.get(hero) 
-									event_caller8 = 's play line against %s.' % (hero)
+									event_caller8 = ' play line against %s.' % (hero)
 								elif the_event9 == '':
 									the_event9 = nefarian_plays.get(hero) 
-									event_caller9 = 's play line against %s.' % (hero)
+									event_caller9 = ' play line against %s.' % (hero)
 								elif the_event10 == '':
 									the_event10 = nefarian_plays.get(hero) 
-									event_caller10 = 's play line against %s.' % (hero)
+									event_caller10 = ' play line against %s.' % (hero)
 						for i in range(0,11):
 							if line == 'trigger%s' % (i):
 								if the_event == '':
@@ -623,9 +623,40 @@ for comment in comments:
 								if the_event9 == '':
 									the_event9 = cthun_triggers[i]
 									event_caller9 = EventFinder('trigger') 
-								if the_event19 == '':
+								if the_event9 == '':
 									the_event10 = cthun_triggers[i]
-									event_caller10 = EventFinder('trigger') 
+									event_caller10 = EventFinder('trigger')
+						if line == 'play-2':
+							if the_event == '':
+								the_event = 'alternate'
+								event_caller = ' alternate play line.'
+							if the_event2 == '':
+								the_event2 = 'alternate'
+								event_caller2 = ' alternate play line.'
+							if the_event3 == '':
+								the_event3 = 'alternate'
+								event_caller3 = ' alternate play line.' 
+							if the_event4 == '':
+								the_event4 = 'alternate'
+								event_caller4 = ' alternate play line.'
+							if the_event5 == '':
+								the_event5 = 'alternate'
+								event_caller5 = ' alternate play line.' 
+							if the_event6 == '':
+								the_event6 = 'alternate'
+								event_caller6 = ' alternate play line.' 
+							if the_event7 == '':
+								the_event7 = 'alternate'
+								event_caller7 = ' alternate play line.' 
+							if the_event8 == '':
+								the_event8 = cthun_triggers[i]
+								event_caller8 = ' alternate play line.' 
+							if the_event9 == '':
+								the_event9 = 'alternate'
+								event_caller9 = ' alternate play line.'
+							if the_event19 == '':
+								the_event10 = 'alternate'
+								event_caller10 = ' alternate play line.'
 				#This is where the  message is made.  If both events and cards are not empty it will start making the message.  I used ifs instead of elifs, because elifs will only work once.
 				#First it will find the link to the sound with SoundFinder.  #Then it will take the card's name, message about the type of line, and the link itself.
 				#It is formatted into []() which is Reddit's way of having hyperlinks in comments.

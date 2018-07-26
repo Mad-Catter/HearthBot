@@ -25,6 +25,9 @@ def SoundFinder(link, event):
 	elif event == "trigger":
 		start = 'TRIGGER_SOUND","url"'
 		remove = 22
+	elif event == "alternate":
+		start = 'ALTERNATE_SOUND","url"'
+		remove = 25
 	#The search searches through the cleaned link for the start term determined earlier, and ends once it hits .ogg (something the sound links always end with).
 	search = re.search(r'%s[\a-z|\s|A-Z]+.ogg' % (start),clean)
 	if search:
