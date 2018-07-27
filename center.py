@@ -1353,7 +1353,7 @@ for comment in comments:
 							cache.append(comment.id)
 							if len(cache) == 101:
 								cache.pop(0)
-							continue
+							pass
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
 				if the_reply != '':
