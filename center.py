@@ -147,7 +147,7 @@ def EventFinder(line_type):
 	elif line_type == 'trigger':
 		return ' trigger line.'
 
-def Eraser()
+def Eraser():
 	true_reply = ''
 	the_card = ''
 	the_event = ''
