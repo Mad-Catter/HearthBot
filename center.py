@@ -190,6 +190,7 @@ def Eraser():
 	event_caller9 = None
 	the_result10 = None
 	event_caller10 = None
+	comment_list = []
 	hero_card = False
 	hero_card2 = False
 	hero_card3 = False
@@ -200,9 +201,17 @@ def Eraser():
 	hero_card8 = False
 	hero_card9 = False
 	hero_card10 = False
-	comment_list = []
-
-
+	the_card_link = ''
+	the_card_link2 = ''
+	the_card_link3 = ''
+	the_card_link4 = ''
+	the_card_link5 = ''
+	the_card_link6 = ''
+	the_card_link7 = ''
+	the_card_link8 = ''
+	the_card_link9 = ''
+	the_card_link10 = ''
+	print 'erase complete'
 #The EventFinder looks at the event lines that are given for a link, and returns a message that is a bit better to read.
 def EventFinder(line_type):
 	if line_type == 'play':
@@ -1503,5 +1512,5 @@ for comment in comments:
 					print "deleted comment error."
 					Eraser()
 					break
-
+			comment_list = []
 			break
