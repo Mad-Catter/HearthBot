@@ -438,60 +438,70 @@ for comment in comments:
 								if the_card == '':
 									if hero == 'guldan':
 										the_card = 'Gul\'dan'
+										hero_card = True
 									else:	
 										the_card = capwords(hero)
 										hero_card = True
 								elif the_card2 == '':
 									if hero == 'guldan':
 										the_card2 = 'Gul\'dan'
+										hero_card2 = True
 									else:	
 										the_card2 = capwords(hero)
 										hero_card2 = True
 								elif the_card3 == '':
 									if hero == 'guldan':
 										the_card3 = 'Gul\'dan'
+										hero_card3 = True
 									else:	
 										the_card3 = capwords(hero)
 										hero_card3 = True
 								elif the_card4 == '':
 									if hero == 'guldan':
 										the_card4 = 'Gul\'dan'
+										hero_card4 = True
 									else:	
 										the_card4 = capwords(hero)
 										hero_card4 = True
 								elif the_card5 == '':
 									if hero == 'guldan':
 										the_card5 = 'Gul\'dan'
+										hero_card5 = True
 									else:	
 										the_card5 = capwords(hero)
 										hero_card5 = True
 								elif the_card6 == '':
 									if hero == 'guldan':
 										the_card6 = 'Gul\'dan'
+										hero_card6 = True
 									else:	
 										the_card6 = capwords(hero)
 										hero_card6 = True
 								elif the_card7 == '':
 									if hero == 'guldan':
 										the_card7 = 'Gul\'dan'
+										hero_card7 = True
 									else:	
 										the_card7 = capwords(hero)
 										hero_card7 = True
 								elif the_card8 == '':
 									if hero == 'guldan':
 										the_card8 = 'Gul\'dan'
+										hero_card8 = True
 									else:	
 										the_card8 = capwords(hero)
 										hero_card8 = True
 								elif the_card9 == '':
 									if hero == 'guldan':
 										the_card9 = 'Gul\'dan'
+										hero_card9 = True
 									else:	
 										the_card9 = capwords(hero)
 										hero_card9 = True
 								elif the_card10 == '':
 									if hero == 'guldan':
 										the_card10 = 'Gul\'dan'
+										hero_card10 = True
 									else:	
 										the_card10 = capwords(hero)
 										hero_card10 = True
