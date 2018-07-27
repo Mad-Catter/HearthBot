@@ -1346,6 +1346,7 @@ for comment in comments:
 							the_reply = 'This is outrageous, it\'s unfair!'
 				if text == 'how-long-can-this-go-on?':
 					try:
+						print 'what about this??'
 						if comment.parent().body == 'how-long-can-this-go-on?':
 							the_reply = '[How long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
 					except praw.exceptions.PRAWException as e:
