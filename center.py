@@ -190,7 +190,6 @@ def Eraser():
 	event_caller9 = None
 	the_result10 = None
 	event_caller10 = None
-	comment_list = []
 	hero_card = False
 	hero_card2 = False
 	hero_card3 = False
