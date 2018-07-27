@@ -436,35 +436,65 @@ for comment in comments:
 						for hero in list_of_hero_names:
 							if card == hero:
 								if the_card == '':
-									the_card = capwords(hero)
-									hero_card = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card = capwords(hero)
+										hero_card = True
 								elif the_card2 == '':
-									the_card2 = capwords(hero)
-									hero_card2 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card2 = capwords(hero)
+										hero_card2 = True
 								elif the_card3 == '':
-									the_card3 = capwords(hero)
-									hero_card3 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card3 = capwords(hero)
+										hero_card3 = True
 								elif the_card4 == '':
-									the_card4 = capwords(hero)
-									hero_card4 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card4 = capwords(hero)
+										hero_card4 = True
 								elif the_card5 == '':
-									the_card5 = capwords(hero)
-									hero_card5 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card5 = capwords(hero)
+										hero_card5 = True
 								elif the_card6 == '':
-									the_card6 = capwords(hero)
-									hero_card6 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card6 = capwords(hero)
+										hero_card6 = True
 								elif the_card7 == '':
-									the_card7 = capwords(hero)
-									hero_card7 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card7 = capwords(hero)
+										hero_card7 = True
 								elif the_card8 == '':
-									the_card8 = capwords(hero)
-									hero_card8 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card8 = capwords(hero)
+										hero_card8 = True
 								elif the_card9 == '':
-									the_card9 = capwords(hero)
-									hero_card9 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card9 = capwords(hero)
+										hero_card9 = True
 								elif the_card10 == '':
-									the_card10 = capwords(hero)
-									hero_card10 = True
+									if hero == 'guldan':
+										the_card@@ == 'Gul\'dan'
+									else:	
+										the_card10 = capwords(hero)
+										hero_card10 = True
 				#This searches for through the comment for any events the same way the cards were searched for.  It then uses the event_caller to dress up the message a bit.
 				#In the example I stated earlier 'play' would be found in the list and have event finder return "\'s play line".
 				for line in comment_list:
@@ -500,62 +530,62 @@ for comment in comments:
 							the_event10 = line 
 							event_caller10 = EventFinder(the_event10)	
 					if line not in event_list:
-						if the_card.lower() in list_of_hero_names and the_event == '':
-							entry_pos = list_of_hero_names.index(the_card.lower())
+						if the_card.lower().replace('\'', '') in list_of_hero_names and the_event == '':
+							entry_pos = list_of_hero_names.index(the_card.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event = entry.replace('-', ' ')
 										the_result = list_of_heroes[entry_pos].get(entry)
-						elif the_card2.lower() in list_of_hero_names and the_event2 == '':
-							entry_pos = list_of_hero_names.index(the_card2.lower())
+						elif the_card2.lower().replace('\'', '') in list_of_hero_names and the_event2 == '':
+							entry_pos = list_of_hero_names.index(the_card2.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event2 = entry.replace('-', ' ')
 										the_result2 = list_of_heroes[entry_pos].get(entry)
-						elif the_card3.lower() in list_of_hero_names and the_event3 == '':
-							entry_pos = list_of_hero_names.index(the_card3.lower())
+						elif the_card3.lower().replace('\'', '') in list_of_hero_names and the_event3 == '':
+							entry_pos = list_of_hero_names.index(the_card3.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event3 = entry.replace('-', ' ')
 										the_result3 = list_of_heroes[entry_pos].get(entry)
-						elif the_card4.lower() in list_of_hero_names and the_event4 == '':
-							entry_pos = list_of_hero_names.index(the_card4.lower())
+						elif the_card4.lower().replace('\'', '') in list_of_hero_names and the_event4 == '':
+							entry_pos = list_of_hero_names.index(the_card4.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event4 = entry.replace('-', ' ')
 										the_result4 = list_of_heroes[entry_pos].get(entry)
-						elif the_card5.lower() in list_of_hero_names and the_event5 == '':
-							entry_pos = list_of_hero_names.index(the_card5.lower())
+						elif the_card5.lower().replace('\'', '') in list_of_hero_names and the_event5 == '':
+							entry_pos = list_of_hero_names.index(the_card5.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event5 = entry.replace('-', ' ')
 										the_result5 = list_of_heroes[entry_pos].get(entry)
-						elif the_card6.lower() in list_of_hero_names and the_event6 == '':
-							entry_pos = list_of_hero_names.index(the_card6.lower())
+						elif the_card6.lower().replace('\'', '') in list_of_hero_names and the_event6 == '':
+							entry_pos = list_of_hero_names.index(the_card6.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event6 = entry.replace('-', ' ')
 										the_result6 = list_of_heroes[entry_pos].get(entry)
-						elif the_card7.lower() in list_of_hero_names and the_event7 == '':
-							entry_pos = list_of_hero_names.index(the_card7.lower())
+						elif the_card7.lower().replace('\'', '') in list_of_hero_names and the_event7 == '':
+							entry_pos = list_of_hero_names.index(the_card7.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event7 = entry.replace('-', ' ')
 										the_result7 = list_of_heroes[entry_pos].get(entry)
-						elif the_card8.lower() in list_of_hero_names and the_event8 == '':
-							entry_pos = list_of_hero_names.index(the_card8.lower())
+						elif the_card8.lower().replace('\'', '') in list_of_hero_names and the_event8 == '':
+							entry_pos = list_of_hero_names.index(the_card8.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event8 = entry.replace('-', ' ')
 										the_result8 = list_of_heroes[entry_pos].get(entry)
-						elif the_card9.lower() in list_of_hero_names and the_event9 == '':
-							entry_pos = list_of_hero_names.index(the_card9.lower())
+						elif the_card9.lower().replace('\'', '') in list_of_hero_names and the_event9 == '':
+							entry_pos = list_of_hero_names.index(the_card9.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event9 = entry.replace('-', ' ')
 										the_result9 = list_of_heroes[entry_pos].get(entry)
-						elif the_card10.lower() in list_of_hero_names and the_event10 == '':
-							entry_pos = list_of_hero_names.index(the_card10.lower())
+						elif the_card10.lower().replace('\'', '') in list_of_hero_names and the_event10 == '':
+							entry_pos = list_of_hero_names.index(the_card10.lower().replace('\'',''))
 							for entry in list_of_heroes[entry_pos].keys():
 								if line == entry:
 										the_event10 = entry.replace('-', ' ')
@@ -1346,11 +1376,7 @@ for comment in comments:
 							the_reply = 'This is outrageous, it\'s unfair!'
 				if text == 'how-long-can-this-go-on?':
 					try:
-						print text
-						print 'YES OFFICER THESE ONES RIGHT Here'
-						print comment.parent().body.lower().replace(' ', '-')
 						if comment.parent().body.lower().replace(' ', '-') == 'how-long-can-this-go-on?':
-							print 'the reply is loaded'
 							the_reply = '[How long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
 					except Exception as e:
 						cache.append(comment.id)
