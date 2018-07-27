@@ -1345,10 +1345,14 @@ for comment in comments:
 						elif dice_roll == 4:
 							the_reply = 'This is outrageous, it\'s unfair!'
 				if text == 'how-long-can-this-go-on?':
-					if comment.parent() == praw.comment:
-						print comment.parent().body
-						if comment.parent().body =='how-long-can-this-go-on?':
+					try:
+						if comment.parent().body == 'how-long-can-this-go-on?':
 							the_reply = '[How long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
+					except praw.exceptions.APIException as e:
+						cache.append(comment.id)
+						if len(cache) == 101:
+							cache.pop(0)
+							continue
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
 				if the_reply != '':
