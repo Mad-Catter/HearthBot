@@ -1351,12 +1351,12 @@ for comment in comments:
 							the_reply = '[How long can this go on?](http://media.services.zam.com/v1/media/byName//hs/sounds/enus/VO_ICC_466_Male_Draenei_Play_01.ogg)'
 					except praw.exceptions.PRAWException as e:
 						print 'this works'
-						if e.error_type == 'AttributeError':
-							print 'and so does this'
-							cache.append(comment.id)
-							if len(cache) == 101:
+
+						print 'and so does this'
+						cache.append(comment.id)
+						if len(cache) == 101:
 								cache.pop(0)
-							pass
+						pass
 				#This is where the reply is created.  It checks out many replies are filled in by going from the last reply that would be filled in to the first reply.
 				#When the amount of replies filled in is found, the program puts them all into a single reply called true_reply.  It then uses the PRAW reply command to send the reply off to Reddit. 
 				if the_reply != '':
