@@ -13,7 +13,7 @@ hyperlink==18.0.0
 idna==2.6
 incremental==17.5.0
 ipaddress==1.0.19
-lxml==4.1.1
+lxml==4.6.2
 parsel==1.4.0
 praw==5.4.0
 prawcore==0.14.0
